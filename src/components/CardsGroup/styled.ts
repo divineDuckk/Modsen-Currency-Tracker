@@ -8,5 +8,5 @@ export const CardsContainer = styled.div`
   max-width: ${MAX_WIDTH}px;
   justify-content: space-between;
   margin: 0 auto;
-  margin-bottom: ${({ theme }) => theme.margins[8]}px;
+  margin-bottom: ${({ theme }) => theme.margins[9]}px;
 `

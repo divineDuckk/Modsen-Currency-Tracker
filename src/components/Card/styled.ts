@@ -11,11 +11,11 @@ export const CardContainer = styled.button`
   padding-left: ${({ theme }) => theme.paddings[2]}px;
   padding-top: ${({ theme }) => theme.paddings[2]}px;
   padding-bottom: ${({ theme }) => theme.paddings[2]}px;
-  gap: ${({ theme }) => theme.gaps[1]}px;
+  gap: ${({ theme }) => theme.gaps[2]}px;
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => theme.colors['cardBg']};
-  margin-bottom: ${({ theme }) => theme.margins[7]}px;
+  margin-bottom: ${({ theme }) => theme.margins[8]}px;
   border-radius: ${CARD_RADIUS}px;
   border: 1px solid ${({ theme }) => theme.colors['cardBorder']};
 `
