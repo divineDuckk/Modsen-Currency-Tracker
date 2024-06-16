@@ -1,12 +1,16 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { ThemeProvider } from 'styled-components'
 
-import { App } from '@components/App'
+import { App } from '@/components/App'
+import { GlobalStyles, darkTheme } from '@/theme'
 
-import './main.scss'
+const MainComponent = () => {
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <GlobalStyles />
+      <App />
+    </ThemeProvider>
+  )
+}
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+ReactDOM.createRoot(document.getElementById('root')!).render(<MainComponent />)

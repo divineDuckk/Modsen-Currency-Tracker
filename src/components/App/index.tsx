@@ -1,5 +1,7 @@
-import { FC } from "react";
+import { FC } from 'react'
+
+import { MainLayout } from '@/components/MainLayout'
 
 export const App: FC = () => {
-  return <p>hello</p>;
-};
+  return <MainLayout></MainLayout>
+}
