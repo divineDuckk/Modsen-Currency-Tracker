@@ -10,8 +10,8 @@ export const Category = styled.h3`
   line-height: ${({ theme }) => theme.lineHeights[5]}px;
   padding-bottom: ${({ theme }) => theme.paddings[0]}px;
   border-bottom: 1px solid ${({ theme }) => theme.colors['categoryBorder']};
-  margin-bottom: ${({ theme }) => theme.margins[6]}px;
+  margin-bottom: ${({ theme }) => theme.margins[7]}px;
 `
 export const Main = styled.main`
-  margin-bottom: ${({ theme }) => theme.margins[9]}px;
+  margin-bottom: ${({ theme }) => theme.margins[10]}px;
 `

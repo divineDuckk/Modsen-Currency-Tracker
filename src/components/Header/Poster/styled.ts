@@ -11,7 +11,7 @@ export const PosterWrapper = styled.div`
   display: flex;
   width: 100%;
   background: ${({ theme }) => theme.colors['posterBg']};
-  margin-bottom: ${({ theme }) => theme.margins[5]}px;
+  margin-bottom: ${({ theme }) => theme.margins[6]}px;
   padding-bottom: ${({ theme }) => theme.paddings[5]}px;
   padding-top: ${({ theme }) => theme.paddings[1]}px;
 `
@@ -21,7 +21,7 @@ export const PosterContainer = styled.div`
   max-width: ${WIDTH}px;
   display: flex;
   align-items: flex-end;
-  gap: ${({ theme }) => theme.gaps[2]}px;
+  gap: ${({ theme }) => theme.gaps[3]}px;
 
   justify-content: flex-start;
   margin-left: auto;
