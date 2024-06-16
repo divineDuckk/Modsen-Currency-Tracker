@@ -12,9 +12,10 @@ const colors = {
   buttonsBg: '#474747',
   posterBg:
     'linear-gradient(225deg, #121212 0%, #24794059 50%, transparent 100%)',
+  categoryBorder: '#474747',
 }
 const gaps = [26, 64, 115]
-const paddings = [29, 30, 45, 58, 96, 121]
+const paddings = [25, 29, 30, 45, 58, 96, 121]
 //////////////////0 , 1, 2 , 3 , 4 ,  5 , 6 , 7 , 8 , 9 , 10 , 11,
 const margins = [16, 20, 29, 30, 45, 57, 96, 121]
 const sizes = [30, 50]

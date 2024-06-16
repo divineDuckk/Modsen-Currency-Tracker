@@ -19,8 +19,8 @@ export const TopPartWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: ${({ theme }) => theme.paddings[1]}px 5%
-    ${({ theme }) => theme.paddings[0]}px 5%;
+  padding: ${({ theme }) => theme.paddings[2]}px 5%
+    ${({ theme }) => theme.paddings[1]}px 5%;
   margin-left: auto;
   margin-right: auto;
 `

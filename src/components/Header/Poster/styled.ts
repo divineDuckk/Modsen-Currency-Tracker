@@ -10,8 +10,8 @@ export const PosterWrapper = styled.div`
   width: 100%;
   background: ${({ theme }) => theme.colors['posterBg']};
   margin-bottom: ${({ theme }) => theme.margins[5]}px;
-  padding-bottom: ${({ theme }) => theme.paddings[3]}px;
-  padding-top: ${({ theme }) => theme.paddings[0]}px;
+  padding-bottom: ${({ theme }) => theme.paddings[4]}px;
+  padding-top: ${({ theme }) => theme.paddings[1]}px;
 `
 
 export const PosterContainer = styled.div`
