@@ -13,6 +13,7 @@ export const TimeBlock = styled.div`
   font-weight: ${({ theme }) => theme.fontWeights[0]};
   line-height: ${({ theme }) => theme.lineHeights[5]}px;
   align-items: center;
+  margin-bottom: ${({ theme }) => theme.margins[7]}px;
 `
 export const Point = styled.span`
   width: ${POINT_SIZE}px;

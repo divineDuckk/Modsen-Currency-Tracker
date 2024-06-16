@@ -1,7 +1,12 @@
-import { FC } from 'react'
+import { FC, PropsWithChildren } from 'react'
 
 import { Header } from '../Header'
 
-export const MainLayout: FC = () => {
-  return <Header />
+export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  )
 }

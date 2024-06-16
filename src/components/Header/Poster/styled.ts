@@ -4,13 +4,15 @@ const MAX_WIDTH_MAIN_TEXT = 700
 const MAX_WIDTH_DESC_TEXT = 397
 const TRANSLATE_VALUE = 63
 const WIDTH = 1456
+const IMAGE_WITDH = 300
+const IMAGE_HEIGHT = 300
 
 export const PosterWrapper = styled.div`
   display: flex;
   width: 100%;
   background: ${({ theme }) => theme.colors['posterBg']};
   margin-bottom: ${({ theme }) => theme.margins[5]}px;
-  padding-bottom: ${({ theme }) => theme.paddings[4]}px;
+  padding-bottom: ${({ theme }) => theme.paddings[5]}px;
   padding-top: ${({ theme }) => theme.paddings[1]}px;
 `
 
@@ -18,7 +20,8 @@ export const PosterContainer = styled.div`
   width: 100%;
   max-width: ${WIDTH}px;
   display: flex;
-  gap: ${({ theme }) => theme.gaps[1]}px;
+  align-items: flex-end;
+  gap: ${({ theme }) => theme.gaps[2]}px;
 
   justify-content: flex-start;
   margin-left: auto;
@@ -40,7 +43,10 @@ export const TextContainer = styled.div`
   flex-direction: column;
   align-items: flex-end;
 `
-export const BigLogo = styled.img``
+export const BigLogo = styled.img`
+  width: ${IMAGE_WITDH}px;
+  height: ${IMAGE_HEIGHT}px;
+`
 
 export const MainTextSpan = styled.span`
   font-size: ${({ theme }) => theme.fontSizes[13]}px;

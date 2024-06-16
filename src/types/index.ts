@@ -1,0 +1,12 @@
+export type CurrencyCode =
+  | 'ARS'
+  | 'AUD'
+  | 'BTC'
+  | 'CAD'
+  | 'CNY'
+  | 'EUR'
+  | 'JPY'
+  | 'LRD'
+  | 'USD'
+  | 'Bovespa Index'
+  | 'IFIX'
