@@ -1,4 +1,4 @@
-import { Card } from '@/components/Card'
+import { Card } from '@/components/CardsGroup/Card'
 import { CardsGroup } from '@/components/CardsGroup'
 import { MOCK_DATA, STOCKS } from '@/constants'
 import { CurrencyData } from '@/interfaces'

@@ -15,6 +15,8 @@ const colors = {
     'linear-gradient(225deg, #121212 0%, #24794059 50%, transparent 100%)',
   categoryBorder: '#474747',
   cardBg: '#202025',
+  popupBg: '#202025',
+  popupWrapperBg: 'rgba(0, 0, 0, 0.5)',
   cardBorder: '#474747',
 }
 const gaps = [17, 26, 30, 64, 100, 115, 184]
