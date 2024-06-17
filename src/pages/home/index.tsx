@@ -1,12 +1,20 @@
+import { useEffect } from 'react'
+
 import { Card } from '@/components/CardsGroup/Card'
 import { CardsGroup } from '@/components/CardsGroup'
-import { MOCK_DATA, STOCKS } from '@/constants'
-import { CurrencyData } from '@/interfaces'
+import { STOCKS } from '@/constants'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import { currencies } from '@/store/selectors/currencies'
+import { fetchCurrencies } from '@/store/thunks/fetchCurrencies'
 
 import { Category, Main } from './styled'
 
 export const Home = () => {
-  const data: CurrencyData[] = Object.values(MOCK_DATA['data'])
+  const dispatch = useAppDispatch()
+  const data = useAppSelector(currencies)
+  useEffect(() => {
+    data.length === 0 && dispatch(fetchCurrencies())
+  }, [])
   return (
     <Main>
       <Category>Stocks</Category>

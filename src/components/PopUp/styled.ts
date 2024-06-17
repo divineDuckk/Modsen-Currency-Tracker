@@ -51,7 +51,11 @@ export const CloseButton = styled.button`
   }
 `
 export const CloseImage = styled.img``
-export const MainContainer = styled.div``
+export const MainContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: ${({ theme }) => theme.paddings[0]}px;
+`
 export const PopUpWrapper = styled.div`
   position: fixed;
   top: 0;
