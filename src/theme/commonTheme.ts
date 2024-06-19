@@ -15,13 +15,16 @@ const colors = {
     'linear-gradient(225deg, #121212 0%, #24794059 50%, transparent 100%)',
   categoryBorder: '#474747',
   cardBg: '#202025',
+  popupBg: '#202025',
+  popupLightBg: '#f5eeff',
+  popupWrapperBg: 'rgba(0, 0, 0, 0.5)',
   cardBorder: '#474747',
+  posterLighterBg: '#f5eeff',
 }
 const gaps = [17, 26, 30, 64, 100, 115, 184]
 const paddings = [25, 29, 30, 45, 58, 96, 121]
 //////////////////0 , 1, 2 , 3 , 4 ,  5 , 6 , 7 , 8 , 9 , 10 , 11,
 const margins = [16, 20, 29, 30, 32, 39, 45, 50, 57, 87, 96, 121]
-const sizes = [30, 50]
 const breakPoints = {}
 
 export const commonTheme = {
@@ -33,5 +36,4 @@ export const commonTheme = {
   margins,
   lineHeights,
   breakPoints,
-  sizes,
 }

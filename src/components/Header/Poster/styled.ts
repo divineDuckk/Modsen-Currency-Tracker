@@ -6,11 +6,15 @@ const TRANSLATE_VALUE = 63
 const WIDTH = 1456
 const IMAGE_WITDH = 300
 const IMAGE_HEIGHT = 300
+const DARK_BODY = '#030304'
 
 export const PosterWrapper = styled.div`
   display: flex;
   width: 100%;
-  background: ${({ theme }) => theme.colors['posterBg']};
+  background: ${({ theme }) =>
+    theme.body === DARK_BODY
+      ? theme.colors['posterBg']
+      : theme.colors['posterLighterBg']};
   margin-bottom: ${({ theme }) => theme.margins[6]}px;
   padding-bottom: ${({ theme }) => theme.paddings[5]}px;
   padding-top: ${({ theme }) => theme.paddings[1]}px;
@@ -57,7 +61,8 @@ export const Description = styled.p`
   max-width: ${MAX_WIDTH_DESC_TEXT}px;
   text-align: center;
   font-weight: ${({ theme }) => theme.fontWeights[0]};
-  color: ${({ theme }) => theme.colors['gray']};
+  color: ${({ theme }) =>
+    theme.body === DARK_BODY ? theme.colors['gray'] : DARK_BODY};
   line-height: ${({ theme }) => theme.lineHeights[8]}px;
   font-size: ${({ theme }) => theme.fontSizes[5]}px;
 `

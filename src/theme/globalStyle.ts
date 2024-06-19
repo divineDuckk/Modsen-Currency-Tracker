@@ -26,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
         background-color:${({ theme }) => theme.body};
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
+        min-height: 100%;
         font-family: "Poppins";
         color:${({ theme }) => theme.textColor}
        
@@ -37,4 +37,6 @@ export const GlobalStyles = createGlobalStyle`
       flex-direction: column;
       align-items:center;
     }
+  
+  
 `

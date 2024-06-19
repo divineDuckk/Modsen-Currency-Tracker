@@ -12,8 +12,13 @@ import JPY_LOGO from '@/assets/yen.svg'
 import LRD_LOGO from '@/assets/libra.svg'
 import USD_LOGO from '@/assets/dollar.svg'
 
-export const API_KEY = 'cur_live_MCimyXopG0Ya1irUYz1qg2bD3QVsmMh6HJXcRFsL'
-export const URL = `https://api.currencyapi.com/v3/latest?apikey=${API_KEY}&currencies=EUR%2CUSD%2CCAD%2CARS%2CAUD%2CLRD%2CJPY%2CCNY%2CBTC`
+export const DARK = 'dark'
+export const LIGHT = 'light'
+export const DEAFAULT_CURRENCY = 'USD'
+
+export const CURRENCY_API_KEY =
+  'cur_live_MCimyXopG0Ya1irUYz1qg2bD3QVsmMh6HJXcRFsL'
+export const URL = `https://api.currencyapi.com/v3/latest?apikey=${CURRENCY_API_KEY}`
 export const MOCK_DATA: MockData = {
   meta: {
     last_updated_at: '2024-06-15T23:59:59Z',
@@ -56,6 +61,29 @@ export const MOCK_DATA: MockData = {
       value: 1,
     },
   },
+}
+
+export const CURRENCIES_FULLNAME = [
+  'Argentine Peso',
+  'Australian Dollar',
+  'Bitcoin',
+  'Canadian Dollar',
+  'Yuan',
+  'Euro',
+  'Libra',
+  'Commercial Dollar',
+]
+
+export const CURRENCY_TO_SHORTNAME_VOCAB = {
+  'Argentine Peso': 'ARS',
+  'Australian Dollar': 'AUD',
+  Bitcoin: 'BTC',
+  'Canadian Dollar': 'CAD',
+  Yuan: 'CNY',
+  Euro: 'EUR',
+  Yen: 'JPY',
+  Libra: 'LRD',
+  'Commercial Dollar': 'USD',
 }
 
 export const CASH_VOCAB: Record<CurrencyCode, CurrencyInfo> = {

@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
+import { CardContainerAttrs } from './types'
+
 const CARD_WIDTH = 520
 const IMAGE_SIZES = 80
 const IMAGE_RADIUS = 8
 const CARD_RADIUS = 8
 
-export const CardContainer = styled.button`
+export const CardContainer = styled.button<CardContainerAttrs>`
   width: ${CARD_WIDTH}px;
-  cursor: pointer;
+  cursor: ${({ $is_stock }) => ($is_stock ? 'default' : 'pointer')};
   padding-left: ${({ theme }) => theme.paddings[2]}px;
   padding-top: ${({ theme }) => theme.paddings[2]}px;
   padding-bottom: ${({ theme }) => theme.paddings[2]}px;
