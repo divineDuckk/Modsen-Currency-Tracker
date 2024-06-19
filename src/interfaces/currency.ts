@@ -12,6 +12,11 @@ export interface CurrencyData {
   code: CurrencyCode
   value: number
 }
+export interface ReturnsFetchCurrenciesData {
+  data: CurrencyData[]
+  time: string
+}
+
 export interface MockData {
   meta: {
     last_updated_at: string

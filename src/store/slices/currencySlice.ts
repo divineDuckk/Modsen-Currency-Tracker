@@ -1,6 +1,6 @@
 import {
-  CurrencyData,
   CurrencyInitialState,
+  ReturnsFetchCurrenciesData,
   SelectedCurrenciesData,
 } from '@/interfaces'
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
@@ -29,8 +29,9 @@ const currencySlice = createSlice({
       })
       .addCase(
         fetchCurrencies.fulfilled,
-        (state, action: PayloadAction<CurrencyData[]>) => {
-          state.homeCurrencies = [...action.payload]
+        (state, action: PayloadAction<ReturnsFetchCurrenciesData>) => {
+          state.homeCurrencies = [...action.payload.data]
+          state.last_updated_at = action.payload.time
           state.status = 'done'
         }
       )
