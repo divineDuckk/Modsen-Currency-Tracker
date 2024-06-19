@@ -1,5 +1,6 @@
 import { CurrencyCode } from '@/types'
 import { CurrencyInfo, MockData, Stock } from '@/interfaces'
+import { Home } from '@/pages/home'
 import ARS_LOGO from '@/assets/peso.svg'
 import AUD_LOGO from '@/assets/australianDollar.svg'
 import BOV_LOGO from '@/assets/bovespa.svg'
@@ -102,4 +103,11 @@ export const CASH_VOCAB: Record<CurrencyCode, CurrencyInfo> = {
 export const STOCKS: Stock[] = [
   { name: 'Bovespa Index', value: '0.15%' },
   { name: 'IFIX', value: '0.15%' },
+]
+
+export const RoutesArr = [
+  { path: '/', page: Home },
+  { path: '/timeline', page: '' },
+  { path: '/bank_card', page: '' },
+  { path: '/contato', page: '' },
 ]
