@@ -15,6 +15,7 @@ export const GlobalStyles = createGlobalStyle`
         color: ${({ theme }) => theme.hColor};
     }
     a{
+        color: ${({ theme }) => theme.textColor};
         text-decoration:none;
     }
     ul{
