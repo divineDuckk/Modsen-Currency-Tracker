@@ -63,6 +63,29 @@ export const MOCK_DATA: MockData = {
   },
 }
 
+export const CURRENCIES_FULLNAME = [
+  'Argentine Peso',
+  'Australian Dollar',
+  'Bitcoin',
+  'Canadian Dollar',
+  'Yuan',
+  'Euro',
+  'Libra',
+  'Commercial Dollar',
+]
+
+export const CURRENCY_TO_SHORTNAME_VOCAB = {
+  'Argentine Peso': 'ARS',
+  'Australian Dollar': 'AUD',
+  Bitcoin: 'BTC',
+  'Canadian Dollar': 'CAD',
+  Yuan: 'CNY',
+  Euro: 'EUR',
+  Yen: 'JPY',
+  Libra: 'LRD',
+  'Commercial Dollar': 'USD',
+}
+
 export const CASH_VOCAB: Record<CurrencyCode, CurrencyInfo> = {
   ARS: { fullname: 'Argentine Peso', image: ARS_LOGO },
   AUD: { fullname: 'Australian Dollar', image: AUD_LOGO },

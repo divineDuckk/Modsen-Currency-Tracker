@@ -16,6 +16,7 @@ const colors = {
   categoryBorder: '#474747',
   cardBg: '#202025',
   popupBg: '#202025',
+  popupLightBg: '#f5eeff',
   popupWrapperBg: 'rgba(0, 0, 0, 0.5)',
   cardBorder: '#474747',
   posterLighterBg: '#f5eeff',
