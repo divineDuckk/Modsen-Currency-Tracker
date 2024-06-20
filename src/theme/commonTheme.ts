@@ -11,21 +11,12 @@ const colors = {
   gradient:
     'linear-gradient(90.18deg, #00CE2C 0.18%, #AEDF23 49.3%, #A3DC00 99.88%)',
   buttonsBg: '#474747',
-  posterBg:
-    'linear-gradient(225deg, #121212 0%, #24794059 50%, transparent 100%)',
   categoryBorder: '#474747',
   cardBg: '#202025',
-  popupBg: '#202025',
-  popupLightBg: '#f5eeff',
   popupWrapperBg: 'rgba(0, 0, 0, 0.5)',
   cardBorder: '#474747',
-  posterLighterBg: '#f5eeff',
-  darkBody: '#030304',
-  blackBorder: '#000',
-  blackButton: '#000',
-  whiteBorder: '#fff',
-  whiteButton: '#fff',
 }
+
 const tops = ['0px', '50%']
 const lefts = ['0px', '50%']
 const zIndexes = [1]

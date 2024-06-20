@@ -31,15 +31,8 @@ export const CurrencyButton = styled.button<CurrencyButtonAttrs>`
   width: ${CURRENCY_BUTTON_WIDTH}px;
   font-family: 'Poppins';
   transition: ${TRANSITION_CURRENCY}s;
-  color: ${({ theme }) =>
-    theme.body === theme.colors['darkBody']
-      ? theme.colors['white']
-      : theme.colors['darkBody']};
-  border: 1px solid
-    ${({ theme }) =>
-      theme.body === theme.colors['darkBody']
-        ? theme.colors['whiteBorder']
-        : theme.colors['darkBorder']};
+  color: ${({ theme }) => theme.textColor};
+  border: 1px solid ${({ theme }) => theme.colors['borders']};
   background-color: transparent;
   border-radius: ${BORDER_RADIUS}px;
   ${({ $isChoosen, theme }) =>
@@ -51,10 +44,6 @@ export const CurrencyButton = styled.button<CurrencyButtonAttrs>`
       top:${CURRENCY_BUTTON_BEFORE_TOP}px;
       border-top: ${CURRENCY_BUTTON_BEFORE_SIZES}px solid transparent;
       border-bottom:  ${CURRENCY_BUTTON_BEFORE_SIZES}px solid transparent;
-      border-left:  ${CURRENCY_BUTTON_BEFORE_SIZES}px solid ${
-      theme.body === theme.colors['darkBody']
-        ? theme.colors['whiteBorder']
-        : theme.colors['darkBorder']
-    };
+      border-left:  ${CURRENCY_BUTTON_BEFORE_SIZES}px solid ${theme.colors['borders']};
   `};
 `

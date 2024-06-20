@@ -13,21 +13,14 @@ const CLOSE_BTN_ROTATE = 45
 export const PopUpContainer = styled.div`
   width: ${POPUP_WIDTH};
   height: ${POPUP_HEIGHT};
-  background-color: ${({ theme }) =>
-    theme.body === theme.colors['darkBody']
-      ? theme.colors['popupBg']
-      : theme.colors['popupLightBg']};
+  background-color: ${({ theme }) => theme.colors['popUpBg']};
   border-radius: ${POPUP_RADIUS}px;
 `
 export const TopPanel = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid
-    ${({ theme }) =>
-      theme.body === theme.colors['darkBody']
-        ? theme.colors['whiteBorder']
-        : theme.colors['blackBorder']};
+  border-bottom: 1px solid ${({ theme }) => theme.colors['borders']};
   border-radius: ${POPUP_RADIUS}px;
 `
 export const Title = styled.h3`
@@ -51,10 +44,7 @@ export const CloseButton = styled.button`
     left: ${({ theme }) => theme.lefts[1]};
     width: ${CLOSE_BTN_THICKNESS}px;
     height: ${CLOSE_BTN_INCREASES}px;
-    background-color: ${({ theme }) =>
-      theme.body === theme.colors['darkBody']
-        ? theme.colors['whiteButton']
-        : theme.colors['darkButton']};
+    background-color: ${({ theme }) => theme.colors['buttons']};
     transform-origin: center center;
   }
 

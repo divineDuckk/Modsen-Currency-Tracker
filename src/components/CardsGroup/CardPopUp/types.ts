@@ -8,10 +8,10 @@ interface CurrencyInfo {
 }
 
 export interface CardPopUpProps {
-  handleClose: () => void
+  onClose: () => void
   currencyInfo: CurrencyInfo
 }
 export interface CurrencyButtonAttrs {
-  $is_choosen: boolean
+  $isChoosen: boolean
 }
 export type CurrencyKey = keyof typeof CURRENCY_TO_SHORTNAME_VOCAB

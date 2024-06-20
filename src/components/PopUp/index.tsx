@@ -13,21 +13,21 @@ import { useLockScroll } from '@/hooks'
 
 import { PopUpProps } from './types'
 
-export const PopUp: FC<PopUpProps> = ({ children, handleClose, title }) => {
+export const PopUp: FC<PopUpProps> = ({ children, onClose, title }) => {
   const handleContainerClick = (event: React.MouseEvent) => {
     event.stopPropagation()
   }
   useLockScroll()
   return createPortal(
-    <PopUpWrapper onClick={handleClose}>
+    <PopUpWrapper onClick={onClose}>
       <PopUpContainer onClick={handleContainerClick}>
         <TopPanel>
           <Title>{title}</Title>
-          <CloseButton onClick={handleClose}></CloseButton>
+          <CloseButton onClick={onClose}></CloseButton>
         </TopPanel>
         <MainContainer>{children}</MainContainer>
       </PopUpContainer>
     </PopUpWrapper>,
-    document.getElementById('pop-up')!
+    document.body
   )
 }

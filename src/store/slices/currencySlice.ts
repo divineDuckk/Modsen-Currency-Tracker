@@ -11,17 +11,13 @@ const initialState: CurrencyInitialState = {
   homeCurrencies: [],
   selectedCurrencies: {},
   status: '',
-  last_updated_at: '',
+  lastUpdatedAt: '',
 }
 
 const currencySlice = createSlice({
   name: 'currencies',
   initialState,
-  reducers: {
-    setUpdateTime: (state, action) => {
-      state.last_updated_at = action.payload
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchCurrencies.pending, (state) => {
@@ -31,7 +27,7 @@ const currencySlice = createSlice({
         fetchCurrencies.fulfilled,
         (state, action: PayloadAction<ReturnsFetchCurrenciesData>) => {
           state.homeCurrencies = [...action.payload.data]
-          state.last_updated_at = action.payload.time
+          state.lastUpdatedAt = action.payload.time
           state.status = 'done'
         }
       )
@@ -51,4 +47,3 @@ const currencySlice = createSlice({
 })
 
 export default currencySlice.reducer
-export const { setUpdateTime } = currencySlice.actions

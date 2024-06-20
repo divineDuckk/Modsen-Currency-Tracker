@@ -10,7 +10,9 @@ import { CardProps } from './types'
 export const Card: FC<CardProps> = ({ name, value }) => {
   const [isPopUpOpen, setIsPopUpOpen] = useState(false)
   const handlePopUpClick = () => {
-    setIsPopUpOpen(true)
+    if (!isStock) {
+      setIsPopUpOpen(true)
+    }
   }
   const handlePopUpClose = () => {
     setIsPopUpOpen(false)
@@ -21,10 +23,7 @@ export const Card: FC<CardProps> = ({ name, value }) => {
 
   return (
     <>
-      <CardContainer
-        $isStock={isStock}
-        onClick={!isStock ? handlePopUpClick : undefined}
-      >
+      <CardContainer $isStock={isStock} onClick={handlePopUpClick}>
         <CashImage src={image} alt="cash logo" />
         <TextInfo>
           <CashName>{fullname}</CashName>
@@ -37,7 +36,7 @@ export const Card: FC<CardProps> = ({ name, value }) => {
       </CardContainer>
       {isPopUpOpen && (
         <CardPopUp
-          handleClose={handlePopUpClose}
+          onClose={handlePopUpClose}
           currencyInfo={{ name, fullname, value: Number(value) }}
         />
       )}

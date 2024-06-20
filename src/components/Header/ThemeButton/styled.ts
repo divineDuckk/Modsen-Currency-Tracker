@@ -34,11 +34,7 @@ export const Slider = styled.span`
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => theme.body};
-  border: 1px solid
-    ${({ theme }) =>
-      theme.body === theme.colors['darkBody']
-        ? theme.colors['white']
-        : theme.colors['darkBody']};
+  border: 1px solid ${({ theme }) => theme.colors['borders']};
   transition: ${TRANSTION}s;
   border-radius: ${SLIDER_RADIUS}px;
 
@@ -46,11 +42,7 @@ export const Slider = styled.span`
     content: '';
     height: ${SLIDER_BEFORE_SIZE}px;
     width: ${SLIDER_BEFORE_SIZE}px;
-    border: 1px solid
-      ${({ theme }) =>
-        theme.body === theme.colors['darkBody']
-          ? theme.colors['white']
-          : theme.colors['darkBody']};
+    border: 1px solid ${({ theme }) => theme.colors['borders']};
     transition: ${TRANSTION}s;
     border-radius: 50%;
   }

@@ -12,7 +12,7 @@ export const LinksBlock = styled.section`
       font-size: ${theme.fontSizes[4]}px;
       line-height: ${theme.lineHeights[3]}px;
       margin-bottom: ${theme.margins[0]}px;
-      color: ${theme.colors['white']};
+      color: ${theme.textColor};
     `}
 
     opacity: ${LINK_OPACITY};

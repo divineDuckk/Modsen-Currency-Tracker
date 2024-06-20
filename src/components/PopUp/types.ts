@@ -1,5 +1,5 @@
 export interface PopUpProps {
-  handleClose: () => void
+  onClose: () => void
   children: JSX.Element
   title: string
 }

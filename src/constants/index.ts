@@ -18,7 +18,7 @@ export const LIGHT = 'light'
 export const DEAFAULT_CURRENCY = 'USD'
 
 export const CURRENCY_API_KEY =
-  'cur_live_MCimyXopG0Ya1irUYz1qg2bD3QVsmMh6HJXcRFsL'
+  'cur_live_mgHUKeo0IyIHyuW22iYSHlg06V7fUy6pa1xEeSzR'
 export const URL = `https://api.currencyapi.com/v3/latest?apikey=${CURRENCY_API_KEY}`
 
 export const MOCK_DATA: MockData = {

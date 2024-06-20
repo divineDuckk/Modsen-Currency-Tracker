@@ -1,10 +1,10 @@
 import { useAppSelector } from '@/store/hooks'
-import { last_updated_at } from '@/store/selectors/currencies'
+import { lastUpdatedAt } from '@/store/selectors/currencies'
 
 import { LastTime, Point, SmallPoint, TimeBlock } from './styled'
 
 export const UpdatedTime = () => {
-  const time = useAppSelector(last_updated_at)
+  const time = useAppSelector(lastUpdatedAt)
   return (
     <TimeBlock>
       <Point>

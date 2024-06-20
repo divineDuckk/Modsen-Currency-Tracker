@@ -33,7 +33,7 @@ export interface Response {
   }
 }
 export interface CurrencyInitialState {
-  last_updated_at: string
+  lastUpdatedAt: string
   homeCurrencies: CurrencyData[]
   selectedCurrencies: Record<string, CurrencyData[]>
   status: string

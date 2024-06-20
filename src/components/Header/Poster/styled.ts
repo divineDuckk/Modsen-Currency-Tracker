@@ -12,9 +12,7 @@ export const PosterWrapper = styled.div`
   width: 100%;
 
   ${({ theme }) => css`
-    background: ${theme.body === theme.colors['darkBody']
-      ? theme.colors['posterBg']
-      : theme.colors['posterLighterBg']};
+    background: ${theme.colors['posterBg']};
     margin-bottom: ${theme.margins[6]}px;
     padding-bottom: ${theme.paddings[5]}px;
     padding-top: ${theme.paddings[1]}px;
@@ -67,9 +65,7 @@ export const Description = styled.p`
 
   ${({ theme }) => css`
     font-weight: ${theme.fontWeights[0]};
-    color: ${theme.body === theme.colors['darkBody']
-      ? theme.colors['gray']
-      : theme.colors['darkBody']};
+    color: ${theme.hColor};
     line-height: ${theme.lineHeights[8]}px;
     font-size: ${theme.fontSizes[5]}px;
   `}
