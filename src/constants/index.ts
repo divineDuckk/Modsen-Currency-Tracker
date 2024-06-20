@@ -108,8 +108,8 @@ export const STOCKS: Stock[] = [
 ]
 
 export const RoutesArr = [
-  { path: '/', page: Home },
-  { path: '/timeline', page: 'div' },
-  { path: '/bank_card', page: 'div' },
-  { path: '/contato', page: 'div' },
+  { path: '/', Page: Home },
+  { path: '/timeline', Page: 'div' },
+  { path: '/bank_card', Page: 'div' },
+  { path: '/contato', Page: 'div' },
 ]

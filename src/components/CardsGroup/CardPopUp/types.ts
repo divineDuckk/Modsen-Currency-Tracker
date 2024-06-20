@@ -8,7 +8,7 @@ interface CurrencyInfo {
 }
 
 export interface CardPopUpProps {
-  onClose: () => void
+  handleClose: () => void
   currencyInfo: CurrencyInfo
 }
 export interface CurrencyButtonAttrs {

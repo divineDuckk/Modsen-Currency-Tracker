@@ -8,9 +8,9 @@ export const LinksSection: FC<LinksProps> = ({ category, linksNames }) => {
   return (
     <LinksBlock>
       <LinksCategory>{category}</LinksCategory>
-      {linksNames.map((el) => (
-        <Link key={el} to={el}>
-          {el}
+      {linksNames.map((linkName) => (
+        <Link key={linkName} to={linkName}>
+          {linkName}
         </Link>
       ))}
     </LinksBlock>

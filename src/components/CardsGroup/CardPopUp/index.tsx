@@ -3,7 +3,7 @@ import {
   CurrencyButton,
   MiniCurrenciesCardBlock,
 } from './styled'
-import { FC, useEffect, useState } from 'react'
+import { FC, useState } from 'react'
 
 import { PopUp } from '@/components/PopUp'
 import { useAppDispatch, useAppSelector } from '@/store/hooks'
@@ -15,7 +15,10 @@ import { CURRENCY_TITLE } from './constants'
 import { MiniCurrenciesCard } from './MiniCurrenciesCard'
 import { CardPopUpProps, CurrencyKey } from './types'
 
-export const CardPopUp: FC<CardPopUpProps> = ({ currencyInfo, onClose }) => {
+export const CardPopUp: FC<CardPopUpProps> = ({
+  currencyInfo,
+  handleClose,
+}) => {
   const [selectedCurrecncy, setSelectedCurrency] = useState(
     currencyInfo.fullname
   )
@@ -23,37 +26,36 @@ export const CardPopUp: FC<CardPopUpProps> = ({ currencyInfo, onClose }) => {
     CURRENCY_TO_SHORTNAME_VOCAB[selectedCurrecncy as CurrencyKey]
 
   const data = useAppSelector(selectedCurrencies)[shortName]
-
   const dispatch = useAppDispatch()
 
-  useEffect(() => {
-    typeof data === 'undefined' && dispatch(fetchSelectedCurrencies(shortName))
-  }, [selectedCurrecncy])
+  if (!data) {
+    dispatch(fetchSelectedCurrencies(shortName))
+  }
 
-  const onClickCurrency = (e: React.MouseEvent<HTMLSpanElement>) => {
+  const handleClickCurrency = (e: React.MouseEvent<HTMLSpanElement>) => {
     const target = e.target as HTMLSpanElement
     const content = target.textContent
     content && setSelectedCurrency(content)
   }
   return (
-    <PopUp onClose={onClose} title={CURRENCY_TITLE}>
+    <PopUp handleClose={handleClose} title={CURRENCY_TITLE}>
       <>
         <MiniCurrenciesCardBlock>
           {data &&
-            data.map((elem) => (
+            data.map((currency) => (
               <MiniCurrenciesCard
-                nameFrom={elem.code}
+                nameFrom={currency.code}
                 nameTo={shortName}
-                value={elem.value}
-                key={elem.code}
+                value={currency.value}
+                key={currency.code}
               />
             ))}
         </MiniCurrenciesCardBlock>
         <CurrenciesChangeBlock>
           {CURRENCIES_FULLNAME.map((fullnume) => (
             <CurrencyButton
-              onClick={onClickCurrency}
-              $is_choosen={selectedCurrecncy === fullnume}
+              onClick={handleClickCurrency}
+              $isChoosen={selectedCurrecncy === fullnume}
               key={fullnume}
             >
               {fullnume}

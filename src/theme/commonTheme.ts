@@ -1,10 +1,10 @@
-////////////////////0 , 1, 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10  ,11, 12, 13,
 const fontSizes = [12, 16, 18, 20, 24, 25, 26, 28, 30, 32, 33, 35, 76, 90]
-//////////////////////0 , 1, 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11,
 const lineHeights = [18, 24, 27, 36, 39, 41, 42, 45, 46, 49, 114, 135]
 const fontWeights = [300, 400, 500, 600]
 
 const colors = {
+  circleOut: '#02461f',
+  circleIn: '#00BC4F',
   gray: '#D9D9D9',
   cashGray: '#A7B2C3',
   white: '#FFF',
@@ -20,10 +20,18 @@ const colors = {
   popupWrapperBg: 'rgba(0, 0, 0, 0.5)',
   cardBorder: '#474747',
   posterLighterBg: '#f5eeff',
+  darkBody: '#030304',
+  blackBorder: '#000',
+  blackButton: '#000',
+  whiteBorder: '#fff',
+  whiteButton: '#fff',
 }
+const tops = ['0px', '50%']
+const lefts = ['0px', '50%']
+const zIndexes = [1]
+
 const gaps = [17, 26, 30, 64, 100, 115, 184]
 const paddings = [25, 29, 30, 45, 58, 96, 121]
-//////////////////0 , 1, 2 , 3 , 4 ,  5 , 6 , 7 , 8 , 9 , 10 , 11,
 const margins = [16, 20, 29, 30, 32, 39, 45, 50, 57, 87, 96, 121]
 const breakPoints = {}
 
@@ -36,4 +44,7 @@ export const commonTheme = {
   margins,
   lineHeights,
   breakPoints,
+  tops,
+  lefts,
+  zIndexes,
 }

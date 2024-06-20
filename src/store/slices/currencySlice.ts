@@ -1,7 +1,7 @@
 import {
+  CurrencyData,
   CurrencyInitialState,
   ReturnsFetchCurrenciesData,
-  SelectedCurrenciesData,
 } from '@/interfaces'
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { fetchCurrencies } from '@/store/thunks/fetchCurrencies'
@@ -37,7 +37,7 @@ const currencySlice = createSlice({
       )
       .addCase(
         fetchSelectedCurrencies.fulfilled,
-        (state, action: PayloadAction<SelectedCurrenciesData>) => {
+        (state, action: PayloadAction<Record<string, CurrencyData[]>>) => {
           state.selectedCurrencies = {
             ...state.selectedCurrencies,
             ...action.payload,

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const WIDTH = 1456
 const LOGO_WIDTH = 40
 const LOGO_HEIGHT = 41
+
 export const Logo = styled.img`
   width: ${LOGO_WIDTH}px;
   height: ${LOGO_HEIGHT}px;

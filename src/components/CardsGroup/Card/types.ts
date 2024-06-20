@@ -5,5 +5,5 @@ export interface CardProps {
   value: number | string
 }
 export interface CardContainerAttrs {
-  $is_stock: boolean
+  $isStock: boolean
 }

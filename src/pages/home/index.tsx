@@ -13,20 +13,20 @@ export const Home = () => {
   const dispatch = useAppDispatch()
   const data = useAppSelector(currencies)
   useEffect(() => {
-    data.length === 0 && dispatch(fetchCurrencies())
+    if (data.length === 0) dispatch(fetchCurrencies())
   }, [])
   return (
     <Main>
       <Category>Stocks</Category>
       <CardsGroup>
-        {STOCKS.map((el) => (
-          <Card name={el.name} value={el.value} key={el.name} />
+        {STOCKS.map(({ name, value }) => (
+          <Card name={name} value={value} key={name} />
         ))}
       </CardsGroup>
       <Category>Quotes</Category>
       <CardsGroup>
-        {data.map((el) => (
-          <Card name={el.code} value={el.value} key={el.code} />
+        {data.map(({ code, value }) => (
+          <Card name={code} value={value} key={code} />
         ))}
       </CardsGroup>
     </Main>

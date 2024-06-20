@@ -21,13 +21,7 @@ export interface MockData {
   meta: {
     last_updated_at: string
   }
-  data: {
-    [key: string]: CurrencyData
-  }
-}
-
-export interface SelectedCurrenciesData {
-  [key: string]: CurrencyData[]
+  data: Record<string, CurrencyData>
 }
 
 export interface Response {
@@ -41,6 +35,6 @@ export interface Response {
 export interface CurrencyInitialState {
   last_updated_at: string
   homeCurrencies: CurrencyData[]
-  selectedCurrencies: SelectedCurrenciesData
+  selectedCurrencies: Record<string, CurrencyData[]>
   status: string
 }

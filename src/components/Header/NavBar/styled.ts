@@ -1,11 +1,13 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const NavContainer = styled.ul`
   display: flex;
-  gap: ${({ theme }) => theme.gaps[5]}px;
-  font-weight: ${({ theme }) => theme.fontWeights[0]};
-  font-size: ${({ theme }) => theme.fontSizes[3]}px;
-  line-height: ${({ theme }) => theme.lineHeights[5]}px;
+  ${({ theme }) => css`
+    gap: ${theme.gaps[5]}px;
+    font-weight: ${theme.fontWeights[0]};
+    font-size: ${theme.fontSizes[3]}px;
+    line-height: ${theme.lineHeights[5]}px;
+  `}
 `
 export const NavElement = styled.li`
   cursor: pointer;

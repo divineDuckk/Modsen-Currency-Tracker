@@ -5,7 +5,6 @@ import { LastTime, Point, SmallPoint, TimeBlock } from './styled'
 
 export const UpdatedTime = () => {
   const time = useAppSelector(last_updated_at)
-  console.log(time)
   return (
     <TimeBlock>
       <Point>

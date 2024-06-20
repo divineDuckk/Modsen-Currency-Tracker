@@ -2,11 +2,11 @@ import axios from 'axios'
 
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { DEAFAULT_CURRENCY, URL } from '@/constants'
-import { Response, SelectedCurrenciesData } from '@/interfaces'
+import { CurrencyData, Response } from '@/interfaces'
 
 const currencies = 'BTC,USD,EUR,ARS,JPY,CNY,AUD,CAD,LRD,'
 export const fetchSelectedCurrencies = createAsyncThunk<
-  SelectedCurrenciesData,
+  Record<string, CurrencyData[]>,
   string
 >(
   'currencies/fetchSelectedCurrencies',
@@ -26,7 +26,7 @@ export const fetchSelectedCurrencies = createAsyncThunk<
         },
       })
       const result = Object.values(res.data.data)
-      const resData: SelectedCurrenciesData = {}
+      const resData: Record<string, CurrencyData[]> = {}
       resData[currency] = result
       return resData
     } catch (error) {

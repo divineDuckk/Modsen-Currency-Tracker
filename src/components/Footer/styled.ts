@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const MINI_LOGO_WIDTH = 33
 const MINI_LOGO_HEIGHT = 37
@@ -28,24 +28,31 @@ export const TopText = styled.h3`
   background: ${({ theme }) => theme.colors['gradient']};
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: ${({ theme }) => theme.fontWeights[3]};
-  font-size: ${({ theme }) => theme.fontSizes[6]}px;
-  line-height: ${({ theme }) => theme.lineHeights[4]}px;
+
+  ${({ theme }) => css`
+    font-weight: ${theme.fontWeights[3]};
+    font-size: ${theme.fontSizes[6]}px;
+    line-height: ${theme.lineHeights[4]}px;
+  `}
 `
 export const BotText = styled.p`
   max-width: ${BOT_TEXT_MAX_WIDTH}px;
-  font-weight: ${({ theme }) => theme.fontWeights[0]};
-  font-size: ${({ theme }) => theme.fontSizes[4]}px;
-  line-height: ${({ theme }) => theme.lineHeights[3]}px;
   height: ${BOT_TEXT_MAX_HEIGHT}px;
+  ${({ theme }) => css`
+    font-weight: ${theme.fontWeights[0]};
+    font-size: ${theme.fontSizes[4]}px;
+    line-height: ${theme.lineHeights[3]}px;
+  `}
 `
 export const FooterBottomText = styled.h2`
   opacity: ${FOOTER_BOT_TEXT_OPACITY};
   text-align: center;
-  margin: ${({ theme }) => theme.margins[7]}px auto;
-  font-weight: ${({ theme }) => theme.fontWeights[1]};
-  font-size: ${({ theme }) => theme.fontSizes[4]}px;
-  line-height: ${({ theme }) => theme.lineHeights[3]}px;
+  ${({ theme }) => css`
+    font-weight: ${theme.fontWeights[1]};
+    font-size: ${theme.fontSizes[4]}px;
+    line-height: ${theme.lineHeights[3]}px;
+    margin: ${theme.margins[7]}px auto;
+  `}
 `
 
 export const MiniLogo = styled.img`

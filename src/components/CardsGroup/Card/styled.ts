@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled, css } from 'styled-components'
 
 import { CardContainerAttrs } from './types'
 
@@ -9,17 +9,19 @@ const CARD_RADIUS = 8
 
 export const CardContainer = styled.button<CardContainerAttrs>`
   width: ${CARD_WIDTH}px;
-  cursor: ${({ $is_stock }) => ($is_stock ? 'default' : 'pointer')};
-  padding-left: ${({ theme }) => theme.paddings[2]}px;
-  padding-top: ${({ theme }) => theme.paddings[2]}px;
-  padding-bottom: ${({ theme }) => theme.paddings[2]}px;
-  gap: ${({ theme }) => theme.gaps[2]}px;
   display: flex;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors['cardBg']};
-  margin-bottom: ${({ theme }) => theme.margins[8]}px;
   border-radius: ${CARD_RADIUS}px;
-  border: 1px solid ${({ theme }) => theme.colors['cardBorder']};
+  ${({ theme, $isStock }) => css`
+    cursor: ${$isStock ? 'default' : 'pointer'};
+    padding-left: ${theme.paddings[2]}px;
+    padding-top: ${theme.paddings[2]}px;
+    padding-bottom: ${theme.paddings[2]}px;
+    gap: ${theme.gaps[2]}px;
+    margin-bottom: ${theme.margins[8]}px;
+    background-color: ${theme.colors['cardBg']};
+    border: 1px solid ${theme.colors['cardBorder']};
+  `}
 `
 export const CashImage = styled.img`
   width: ${IMAGE_SIZES}px;
@@ -31,14 +33,18 @@ export const TextInfo = styled.div`
   font-family: 'Poppins';
 `
 export const CashName = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes[11]}px;
-  font-weight: ${({ theme }) => theme.fontWeights[1]};
-  line-height: ${({ theme }) => theme.lineHeights[9]}px;
-  color: ${({ theme }) => theme.colors['gray']};
+  ${({ theme }) => css`
+    font-size: ${theme.fontSizes[11]}px;
+    font-weight: ${theme.fontWeights[1]};
+    line-height: ${theme.lineHeights[9]}px;
+    color: ${theme.colors['gray']};
+  `}
 `
 export const Value = styled.span`
-  color: ${({ theme }) => theme.colors['cashGray']};
-  font-size: ${({ theme }) => theme.fontSizes[9]}px;
-  font-weight: ${({ theme }) => theme.fontWeights[0]};
-  line-height: ${({ theme }) => theme.lineHeights[5]}px;
+  ${({ theme }) => css`
+    font-size: ${theme.fontSizes[9]}px;
+    font-weight: ${theme.fontWeights[0]};
+    line-height: ${theme.lineHeights[5]}px;
+    color: ${theme.colors['cashGray']};
+  `}
 `

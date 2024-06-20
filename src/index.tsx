@@ -7,12 +7,12 @@ import { ThemeProvider } from 'styled-components'
 import { App } from '@/components/App'
 import { GlobalStyles, darkTheme, lightTheme } from '@/theme'
 import { useAppSelector } from '@/store/hooks'
-import { selectTheme } from '@/store/selectors'
+import { selectThemeName } from '@/store/selectors'
 import { LIGHT } from '@/constants'
 import { persistor, store } from '@/store'
 
 const MainComponent = () => {
-  const theme = useAppSelector(selectTheme)
+  const theme = useAppSelector(selectThemeName)
   return (
     <ThemeProvider theme={theme === LIGHT ? lightTheme : darkTheme}>
       <GlobalStyles />
