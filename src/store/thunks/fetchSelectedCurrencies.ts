@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { DEAFAULT_CURRENCY, URL } from '@/constants'
+import { DEAFAULT_CURRENCY } from '@/constants'
 import { CurrencyData, Response } from '@/interfaces'
 
 const currencies = 'BTC,USD,EUR,ARS,JPY,CNY,AUD,CAD,LRD,'
@@ -19,7 +19,7 @@ export const fetchSelectedCurrencies = createAsyncThunk<
           filtredCurrencies.length - 1
         )
       }
-      const res: Response = await axios.get(URL, {
+      const res: Response = await axios.get(process.env.CURRENCY_API_URL, {
         params: {
           currencies: filtredCurrencies,
           base_currency: currency,

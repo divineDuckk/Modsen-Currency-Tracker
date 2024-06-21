@@ -17,10 +17,6 @@ export const DARK = 'dark'
 export const LIGHT = 'light'
 export const DEAFAULT_CURRENCY = 'USD'
 
-export const CURRENCY_API_KEY =
-  'cur_live_mgHUKeo0IyIHyuW22iYSHlg06V7fUy6pa1xEeSzR'
-export const URL = `https://api.currencyapi.com/v3/latest?apikey=${CURRENCY_API_KEY}`
-
 export const MOCK_DATA: MockData = {
   meta: {
     last_updated_at: '2024-06-15T23:59:59Z',
