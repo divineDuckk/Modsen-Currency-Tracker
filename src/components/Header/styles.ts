@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
 const WIDTH = 1456
+const LOGO_WIDTH = 40
+const LOGO_HEIGHT = 41
 
 export const Logo = styled.img`
-  width: 40px;
-  height: 41px;
+  width: ${LOGO_WIDTH}px;
+  height: ${LOGO_HEIGHT}px;
 `
 export const HeaderContainer = styled.header`
   width: 100%;

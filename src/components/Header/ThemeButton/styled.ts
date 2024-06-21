@@ -1,14 +1,16 @@
 import styled from 'styled-components'
 
-const transalteValue = 22
-const sliderBeforeSize = 26
-const sliderBorderRadius = 34
-const transition = 0.4
+const TRANSLATE_VALUE = 27
+const SLIDER_BEFORE_SIZE = 23
+const SLIDER_RADIUS = 34
+const TRANSTION = 0.4
+const SWTICH_WTDTH = 53
+const SWTICH_HEITH = 25
 
 export const Switch = styled.label`
   position: relative;
-  width: ${({ theme }) => theme.sizes[1]}px;
-  height: ${({ theme }) => theme.sizes[0]}px;
+  width: ${SWTICH_WTDTH}px;
+  height: ${SWTICH_HEITH}px;
 `
 export const CheckBox = styled.input`
   opacity: 0;
@@ -19,7 +21,7 @@ export const CheckBox = styled.input`
   }
 
   &:checked + span:before {
-    transform: translateX(${transalteValue}px);
+    transform: translateX(${TRANSLATE_VALUE}px);
   }
 `
 export const Slider = styled.span`
@@ -32,16 +34,16 @@ export const Slider = styled.span`
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => theme.body};
-  border: 1px solid white;
-  transition: ${transition}s;
-  border-radius: ${sliderBorderRadius}px;
+  border: 1px solid ${({ theme }) => theme.colors['borders']};
+  transition: ${TRANSTION}s;
+  border-radius: ${SLIDER_RADIUS}px;
 
   &:before {
     content: '';
-    height: ${sliderBeforeSize}px;
-    width: ${sliderBeforeSize}px;
-    border: 1px solid white;
-    transition: ${transition}s;
+    height: ${SLIDER_BEFORE_SIZE}px;
+    width: ${SLIDER_BEFORE_SIZE}px;
+    border: 1px solid ${({ theme }) => theme.colors['borders']};
+    transition: ${TRANSTION}s;
     border-radius: 50%;
   }
 `
