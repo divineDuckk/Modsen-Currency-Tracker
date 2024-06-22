@@ -16,6 +16,6 @@ export const NavElement = styled.li`
   transition: ${NAV_ELEM_TRANSITION}s;
   &:hover {
     opacity: 1;
-    filter: drop-shadow(0 0 0.75rem ${({ theme }) => theme.colors['white']});
+    filter: drop-shadow(0 0 0.5rem ${({ theme }) => theme.shadow});
   }
 `

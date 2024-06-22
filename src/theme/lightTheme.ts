@@ -6,6 +6,7 @@ const lightThemeColors = {
   buttons: '#000',
   posterBg: '#f5eeff',
   popUpBg: '#f5eeff',
+  shadow: '#000',
 }
 
 export const lightTheme = {
