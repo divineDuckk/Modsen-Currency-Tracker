@@ -1,24 +1,24 @@
 import {
+  CurrenciesPopUpInfoContainer,
   CurrencyValye,
   FromToInfo,
-  MiniCurrenciesCardContainer,
 } from './styled'
 import { FC } from 'react'
 
 import { TO_FIXED_CURRENCY } from './constants'
-import { MiniCurrenciesCardProps } from './types'
+import { CurrenciesPopUpInfoProps } from './types'
 
-export const MiniCurrenciesCard: FC<MiniCurrenciesCardProps> = ({
+export const CurrenciesPopUpInfo: FC<CurrenciesPopUpInfoProps> = ({
   nameFrom,
   nameTo,
   value,
 }) => {
   return (
-    <MiniCurrenciesCardContainer>
+    <CurrenciesPopUpInfoContainer>
       <FromToInfo>
         {nameFrom} to {nameTo}
       </FromToInfo>
       <CurrencyValye>{value.toFixed(TO_FIXED_CURRENCY)}</CurrencyValye>
-    </MiniCurrenciesCardContainer>
+    </CurrenciesPopUpInfoContainer>
   )
 }
