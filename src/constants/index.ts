@@ -70,6 +70,7 @@ export const CURRENCIES_FULLNAME = [
   'Euro',
   'Libra',
   'Commercial Dollar',
+  'Yen',
 ]
 
 export const CURRENCY_TO_SHORTNAME_VOCAB = {

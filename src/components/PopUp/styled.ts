@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 const POPUP_WRAPPER_SIZES = '100%'
-const POPUP_WIDTH = '40%'
-const POPUP_HEIGHT = '55%'
+const POPUP_WIDTH = '50%'
+const POPUP_HEIGHT = '60%'
 const POPUP_RADIUS = 10
 const CLOSE_BTN_SIZE = 50
 const CLOSE_BTN_THICKNESS = 2
@@ -63,6 +63,8 @@ export const MainContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: ${({ theme }) => theme.paddings[0]}px;
+  flex-wrap: wrap;
+  gap: ${({ theme }) => theme.gaps[0]}px;
 `
 export const PopUpWrapper = styled.div`
   position: fixed;
