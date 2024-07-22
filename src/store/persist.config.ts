@@ -6,6 +6,5 @@ import { rootReducer } from './slices'
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['themeSlice'],
 }
 export const persistedReducer = persistReducer(persistConfig, rootReducer)

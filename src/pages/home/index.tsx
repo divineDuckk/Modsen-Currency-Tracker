@@ -14,7 +14,6 @@ export const Home = () => {
   const data = useAppSelector(currencies)
   useEffect(() => {
     if (data.length === 0) {
-      console.log('ssda')
       dispatch(fetchCurrencies())
     }
   }, [])
