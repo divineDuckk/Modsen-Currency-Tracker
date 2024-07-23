@@ -15,6 +15,9 @@ const colors = {
   cardBg: '#202025',
   popupWrapperBg: 'rgba(0, 0, 0, 0.5)',
   cardBorder: '#474747',
+  candleRed: '#ea3943',
+  candleGreen: '#16c781',
+  
 }
 
 const tops = ['0px', '50%']

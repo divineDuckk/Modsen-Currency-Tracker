@@ -7,6 +7,7 @@ const lightThemeColors = {
   posterBg: '#f5eeff',
   popUpBg: '#f5eeff',
   shadow: '#000',
+  gridGraphic: 'rgba(0,0,0,0.9)',
 }
 
 export const lightTheme = {
