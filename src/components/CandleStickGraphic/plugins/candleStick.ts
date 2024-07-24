@@ -1,5 +1,6 @@
-import { Plugin } from "chart.js"
-import { CustomDataPoint } from "../types"
+import { Plugin } from 'chart.js'
+
+import { CustomDataPoint } from '@/interfaces'
 
 export const candleStick: Plugin<'bar'> = {
   id: 'candleStick',

@@ -2,6 +2,7 @@ import { CurrencyCode } from '@/types'
 import { CurrencyInfo, CustomDataPoint, MockData, Stock } from '@/interfaces'
 import { Home } from '@/pages/home'
 import { TimeLine } from '@/pages/timeLine'
+import { Contact } from '@/pages/contact'
 import ARS_LOGO from '@/assets/peso.svg'
 import AUD_LOGO from '@/assets/australianDollar.svg'
 import BOV_LOGO from '@/assets/bovespa.svg'
@@ -73,6 +74,17 @@ export const CURRENCIES_FULLNAME = [
   'Commercial Dollar',
   'Yen',
 ]
+export const FULLNAME_TO_CURRENCIES_SYMBOLS: Record<string, string> = {
+  'Argentine Peso': '$',
+  'Australian Dollar': '$',
+  Bitcoin: '₿',
+  'Canadian Dollar': '$',
+  Yuan: '¥',
+  Euro: '€',
+  Libra: '$',
+  'Commercial Dollar': '$',
+  Yen: '¥',
+}
 
 export const CURRENCY_TO_SHORTNAME_VOCAB = {
   'Argentine Peso': 'ARS',
@@ -104,12 +116,13 @@ export const STOCKS: Stock[] = [
   { name: 'Bovespa Index', value: '0.15%' },
   { name: 'IFIX', value: '0.15%' },
 ]
+export const MAX_DAYS_VALUE = 30
 
 export const RoutesArr = [
   { path: '/', Page: Home },
   { path: '/timeline', Page: TimeLine },
   { path: '/bank_card', Page: 'div' },
-  { path: '/contato', Page: 'div' },
+  { path: '/contato', Page: Contact },
 ]
 
 export const HISTORY_MOCK_DATA: CustomDataPoint[] = [

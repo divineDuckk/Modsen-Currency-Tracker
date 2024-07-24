@@ -1,3 +1,4 @@
+import { MAX_DAYS_VALUE } from '@/constants'
 import { TimeLineDataStucture } from '@/interfaces'
 
 const getRandomNumberInRange = (min: number, max: number): number =>
@@ -13,7 +14,7 @@ export const getRandomChartData = (
 
   let previousClose = getRandomNumberInRange(min, max)
 
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < MAX_DAYS_VALUE; i++) {
     const open = previousClose
     const close = getRandomNumberInRange(min, max)
     const high = Math.max(open, close, getRandomNumberInRange(open, max))

@@ -1,6 +1,6 @@
 import { Chart, Plugin, TooltipModel } from 'chart.js'
 
-import { CustomDataPoint } from '../types'
+import { CustomDataPoint } from '@/interfaces'
 
 export const cross = (currency: string): Plugin<'bar'> => ({
   id: 'cross',
