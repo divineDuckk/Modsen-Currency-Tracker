@@ -1,9 +1,12 @@
 import styled, { keyframes } from 'styled-components'
 
+const BORDER_RADIUS = 5
+const ANIMATION_TIME = 0.5
+
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   to {
     opacity: 1;
@@ -18,20 +21,20 @@ const fadeOut = keyframes`
   }
   to {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
 `
 
 export const NotificationContainer = styled.div<{ $isFadeOut: boolean }>`
   position: fixed;
-  top: 90%;
-  left: 1%;
+  top: ${({ theme }) => theme.tops[2]};
+  right: ${({ theme }) => theme.rights[0]};
   transform: translateY(-50%);
   background-color: ${({ theme }) => theme.colors.notificationBackground};
-  padding: 1vw;
-  border-radius: 4px;
-  animation: ${({ $isFadeOut }) => ($isFadeOut ? fadeOut : fadeIn)} 0.5s
-    forwards;
+  padding: 1%;
+  border-radius: ${BORDER_RADIUS}px;
+  animation: ${({ $isFadeOut }) => ($isFadeOut ? fadeOut : fadeIn)}
+    ${ANIMATION_TIME}s forwards;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,6 +43,6 @@ export const NotificationContainer = styled.div<{ $isFadeOut: boolean }>`
 
 export const NotificationMessage = styled.p`
   color: ${({ theme }) => theme.colors.black};
-  font-size: 1vw;
+  font-size: ${({ theme }) => theme.fontSizes[2]}px;
   cursor: default;
 `

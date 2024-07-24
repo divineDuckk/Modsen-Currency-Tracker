@@ -22,8 +22,9 @@ const colors = {
   contactBg: '#8395f2',
 }
 
-const tops = ['0px', '50%']
+const tops = ['0px', '50%', '90%']
 const lefts = ['0px', '50%']
+const rights = ['1%']
 const zIndexes = [1]
 
 const gaps = [17, 26, 30, 64, 100, 115, 184]
@@ -43,4 +44,5 @@ export const commonTheme = {
   tops,
   lefts,
   zIndexes,
+  rights,
 }
