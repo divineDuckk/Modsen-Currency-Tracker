@@ -1,28 +1,34 @@
+import {
+  areTimeLineDataEqual,
+  timeLineDataToChartData,
+} from '@/utils/functions'
 import { Chart, registerables } from 'chart.js'
 import { Component, createRef } from 'react'
 import { withTheme } from 'styled-components'
 
 import { CustomDataPoint } from '@/interfaces'
-import { timeLineDataToChartData } from '@/utils/functions'
-import { HISTORY_MOCK_DATA } from '@/constants'
+import { FULLNAME_TO_CURRENCIES_SYMBOLS } from '@/constants'
+import { chartObserver } from '@/utils/observer'
 
 import { config } from './config'
-import { MAX_DAYS_VALUE } from './constants'
 import { ChartBox, GraphicCanvas } from './styled'
 import { CandleStickGraphicProps } from './types'
 
 class CandleStickGraphic extends Component<CandleStickGraphicProps> {
   chartRef = createRef<HTMLCanvasElement>()
   chartInstance: Chart<'bar', CustomDataPoint[]> | undefined
+
   componentDidMount() {
     this.createChart()
   }
+
   componentDidUpdate(prevProps: CandleStickGraphicProps) {
+    const themeChanged = prevProps.theme !== this.props.theme
     if (
-      prevProps.theme !== this.props.theme ||
-      prevProps.data.length !== this.props.data.length ||
-      this.props.data.length === MAX_DAYS_VALUE
+      themeChanged ||
+      !areTimeLineDataEqual(prevProps.data, this.props.data)
     ) {
+      chartObserver.notify(true)
       this.updateChart()
     }
   }
@@ -39,9 +45,8 @@ class CandleStickGraphic extends Component<CandleStickGraphicProps> {
         this.chartRef.current,
         config(
           this.props.theme,
-          this.props.data.length
-            ? timeLineDataToChartData(this.props.data)
-            : HISTORY_MOCK_DATA
+          timeLineDataToChartData(this.props.data),
+          FULLNAME_TO_CURRENCIES_SYMBOLS[this.props.selectedType]
         )
       )
     }
@@ -58,6 +63,7 @@ class CandleStickGraphic extends Component<CandleStickGraphicProps> {
       this.chartInstance = undefined
     }
   }
+
   render() {
     return (
       <ChartBox>
@@ -66,6 +72,7 @@ class CandleStickGraphic extends Component<CandleStickGraphicProps> {
     )
   }
 }
+
 export const CandleStickGraphicWithTheme = withTheme(
   CandleStickGraphic
 ) as React.ComponentType<Omit<CandleStickGraphicProps, 'theme'>>

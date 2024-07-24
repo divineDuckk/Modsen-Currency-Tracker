@@ -1,20 +1,19 @@
-import { ChartConfiguration, ScriptableContext, TooltipItem } from 'chart.js'
-import { DefaultTheme } from 'styled-components'
-
-import { CustomDataPoint } from '@/interfaces'
-import { HISTORY_MOCK_DATA } from '@/constants'
-
-import { axes, candleStick, cross } from './plugins'
-import 'chartjs-adapter-date-fns'
 import {
   GRAPHIC_PADDING,
   TOOL_TIP_TOFIXED_VALUE,
   Y_TICKS_PADDING,
 } from './constants'
+import { ChartConfiguration, ScriptableContext, TooltipItem } from 'chart.js'
+import { DefaultTheme } from 'styled-components'
+
+import { CustomDataPoint } from '@/interfaces'
+
+import { axes, candleStick, cross } from './plugins'
+import 'chartjs-adapter-date-fns'
 
 export const config = (
   theme: DefaultTheme,
-  chartData: CustomDataPoint[] = HISTORY_MOCK_DATA,
+  chartData: CustomDataPoint[],
   currency: string = '$'
 ): ChartConfiguration<'bar', CustomDataPoint[]> => ({
   type: 'bar',
@@ -24,7 +23,7 @@ export const config = (
         data: chartData,
         backgroundColor: (ctx: ScriptableContext<'bar'>) => {
           const raw = ctx.raw as CustomDataPoint
-          return raw.c < raw.o
+          return raw?.c < raw?.o
             ? theme.colors.candleRed
             : theme.colors.candleGreen
         },

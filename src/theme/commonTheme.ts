@@ -17,7 +17,9 @@ const colors = {
   cardBorder: '#474747',
   candleRed: '#ea3943',
   candleGreen: '#16c781',
-  
+  notificationBackground: '#03fc1c',
+  black: '#000',
+  contactBg: '#8395f2',
 }
 
 const tops = ['0px', '50%']

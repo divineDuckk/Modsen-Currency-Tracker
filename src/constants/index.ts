@@ -73,6 +73,17 @@ export const CURRENCIES_FULLNAME = [
   'Commercial Dollar',
   'Yen',
 ]
+export const FULLNAME_TO_CURRENCIES_SYMBOLS: Record<string, string> = {
+  'Argentine Peso': '$',
+  'Australian Dollar': '$',
+  Bitcoin: '₿',
+  'Canadian Dollar': '$',
+  Yuan: '¥',
+  Euro: '€',
+  Libra: '$',
+  'Commercial Dollar': '$',
+  Yen: '¥',
+}
 
 export const CURRENCY_TO_SHORTNAME_VOCAB = {
   'Argentine Peso': 'ARS',
@@ -104,6 +115,7 @@ export const STOCKS: Stock[] = [
   { name: 'Bovespa Index', value: '0.15%' },
   { name: 'IFIX', value: '0.15%' },
 ]
+export const MAX_DAYS_VALUE = 30
 
 export const RoutesArr = [
   { path: '/', Page: Home },
