@@ -7,6 +7,7 @@ const INPUT_WIDTH = 150
 const INPUT_HEIGHT = 45
 
 const MAX_BLOCK_WIDTH = INPUT_WIDTH * 3
+const INPUT_PADDING = 20
 
 export const AddDataButton = styled.button`
   width: ${BUTTON_WIDTH}px;
@@ -32,8 +33,8 @@ export const ManageButtonsWrapper = styled.div`
 `
 export const ClearDataButton = styled(AddDataButton)``
 export const RandomButton = styled(AddDataButton)``
-const Input = styled.input`
-  font-family: 'Poppins';
+export const InformationInput = styled.input`
+  font-family: 'Arial';
   width: ${INPUT_WIDTH}px;
   height: ${INPUT_HEIGHT}px;
   border: 0;
@@ -44,13 +45,10 @@ const Input = styled.input`
   &:focus {
     outline: none;
   }
-  padding-left: 1%;
+  padding-left: ${INPUT_PADDING}px;
+  padding-right: ${INPUT_PADDING}px;
 `
-export const DateInput = styled(Input)``
-export const Open = styled(Input)``
-export const Close = styled(Input)``
-export const Low = styled(Input)``
-export const High = styled(Input)``
+
 export const Selector = styled.select`
   font-family: 'Poppins';
   font-size: ${({ theme }) => theme.fontSizes[0]}px;

@@ -3,10 +3,13 @@ import { createPortal } from 'react-dom'
 
 import { NOTIFICATION_TIME, TIME_TO_CLOSE } from './constants'
 import { NotificationContainer, NotificationMessage } from './styled'
-import { Props, State } from './types'
+import { NotificationProps, NotificationState } from './types'
 
-export class Notification extends Component<Props, State> {
-  constructor(props: Props) {
+export class Notification extends Component<
+  NotificationProps,
+  NotificationState
+> {
+  constructor(props: NotificationProps) {
     super(props)
     this.state = {
       isMounted: false,

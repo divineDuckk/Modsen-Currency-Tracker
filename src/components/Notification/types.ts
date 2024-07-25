@@ -1,9 +1,12 @@
-export type Props = {
+export type NotificationProps = {
   onClose: () => void
   message: string
 }
 
-export type State = {
+export type NotificationState = {
   isMounted: boolean
   isFadeOut: boolean
+}
+export interface NotificationContainerProps {
+  $isFadeOut: boolean
 }

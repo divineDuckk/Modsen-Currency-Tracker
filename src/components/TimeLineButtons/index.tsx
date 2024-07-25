@@ -1,13 +1,9 @@
 import {
   AddDataButton,
   ClearDataButton,
-  Close,
-  DateInput,
-  High,
-  Low,
+  InformationInput,
   ManageBlockWrapper,
   ManageButtonsWrapper,
-  Open,
   RandomButton,
   Selector,
   SelectorOption,
@@ -112,30 +108,30 @@ export class TimeLineButtons extends Component<
     return (
       <>
         <ManageBlockWrapper>
-          <DateInput
+          <InformationInput
             type="date"
             value={date}
             onChange={this.handleDateChange}
           />
-          <Open
+          <InformationInput
             min={MIN_VALUE}
             value={open}
             onChange={this.handleOpenChange}
             placeholder={PLACEHOLDERS.open}
           />
-          <Close
+          <InformationInput
             min={MIN_VALUE}
             value={close}
             onChange={this.handleCloseChange}
             placeholder={PLACEHOLDERS.close}
           />
-          <Low
+          <InformationInput
             min={MIN_VALUE}
             value={low}
             onChange={this.handleLowChange}
             placeholder={PLACEHOLDERS.low}
           />
-          <High
+          <InformationInput
             min={MIN_VALUE}
             value={high}
             onChange={this.handleHighChange}

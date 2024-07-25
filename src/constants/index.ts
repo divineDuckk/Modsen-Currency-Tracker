@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-duplicate-enum-values */
 import { CurrencyCode } from '@/types'
 import { CurrencyInfo, CustomDataPoint, MockData, Stock } from '@/interfaces'
 import { Home } from '@/pages/home'
@@ -73,18 +74,17 @@ export const CURRENCIES_FULLNAME = [
   'Commercial Dollar',
   'Yen',
 ]
-export const FULLNAME_TO_CURRENCIES_SYMBOLS: Record<string, string> = {
-  'Argentine Peso': '$',
-  'Australian Dollar': '$',
-  Bitcoin: '₿',
-  'Canadian Dollar': '$',
-  Yuan: '¥',
-  Euro: '€',
-  Libra: '$',
-  'Commercial Dollar': '$',
-  Yen: '¥',
+export enum FULLNAME_TO_CURRENCIES_SYMBOLS {
+  'Argentine Peso' = '$',
+  'Australian Dollar' = '$',
+  Bitcoin = '₿',
+  'Canadian Dollar' = '$',
+  Yuan = '¥',
+  Euro = '€',
+  Libra = '$',
+  'Commercial Dollar' = '$',
+  Yen = '¥',
 }
-
 export const CURRENCY_TO_SHORTNAME_VOCAB = {
   'Argentine Peso': 'ARS',
   'Australian Dollar': 'AUD',
