@@ -1,8 +1,19 @@
 import { commonTheme } from './commonTheme'
 
+const lightThemeColors = {
+  ...commonTheme.colors,
+  borders: '#000',
+  buttons: '#000',
+  posterBg: '#f5eeff',
+  popUpBg: '#f5eeff',
+  shadow: '#000',
+}
+
 export const lightTheme = {
+  name: 'light',
   body: '#fff',
   hColor: '#000',
   textColor: '#000',
   ...commonTheme,
+  colors: lightThemeColors,
 }
