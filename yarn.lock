@@ -4616,14 +4616,6 @@ ignore@^5.2.0, ignore@^5.2.4, ignore@^5.3.1:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.1.tgz#5073e554cd42c5b33b394375f538b8593e34d4ef"
   integrity sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==
 
-image-minimizer-webpack-plugin@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/image-minimizer-webpack-plugin/-/image-minimizer-webpack-plugin-4.0.2.tgz#793bee4979ae6753f6e90ed739252d57ee2863f3"
-  integrity sha512-/A7yc5r/6wQBF/AvVPO8eEroV2XwBFg36+7staL2M88E4VrcjSSjkNJn4dUizw3FAZ/GXO8A7IwWrIGC0f2tCg==
-  dependencies:
-    schema-utils "^4.2.0"
-    serialize-javascript "^6.0.2"
-
 imagemin-gifsicle@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/imagemin-gifsicle/-/imagemin-gifsicle-7.0.0.tgz#1a7ab136a144c4678657ba3b6c412f80805d26b0"
@@ -7016,7 +7008,7 @@ send@0.18.0:
     range-parser "~1.2.1"
     statuses "2.0.1"
 
-serialize-javascript@^6.0.1, serialize-javascript@^6.0.2:
+serialize-javascript@^6.0.1:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-6.0.2.tgz#defa1e055c83bf6d59ea805d8da862254eb6a6c2"
   integrity sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==
