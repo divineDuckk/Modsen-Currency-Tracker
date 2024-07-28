@@ -9,6 +9,7 @@ import { withTheme } from 'styled-components'
 import { CustomDataPoint } from '@/interfaces'
 import { FULLNAME_TO_CURRENCIES_SYMBOLS } from '@/constants'
 import { chartObserver } from '@/utils/observer'
+import { SYMBOLS_TYPE } from '@/types'
 
 import { config } from './config'
 import { ChartBox, GraphicCanvas } from './styled'
@@ -46,7 +47,9 @@ class CandleStickGraphic extends Component<CandleStickGraphicProps> {
         config(
           this.props.theme,
           timeLineDataToChartData(this.props.data),
-          FULLNAME_TO_CURRENCIES_SYMBOLS[this.props.selectedType]
+          FULLNAME_TO_CURRENCIES_SYMBOLS[
+            this.props.selectedType as SYMBOLS_TYPE
+          ]
         )
       )
     }

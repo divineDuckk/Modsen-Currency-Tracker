@@ -9,6 +9,7 @@ const darkThemeColors = {
   popUpBg: '#202025',
   shadow: '#fff',
   gridGraphic: 'rgba(255,255,255,0.1)',
+  searchInputBg: '#1b1f28',
 }
 export const darkTheme = {
   name: 'dark',
