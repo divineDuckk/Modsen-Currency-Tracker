@@ -26,7 +26,7 @@ export const Card: FC<CardProps> = ({ name, value }) => {
       <CardContainer
         $isStock={isStock}
         onClick={handlePopUpClick}
-        data-testid="open_popup"
+        data-testid={`open_popup_${name}`}
       >
         <CashImage src={image} alt="cash logo" />
         <TextInfo>

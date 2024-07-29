@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const BankCardContainer = styled.div`
+export const BankCardContainer = styled.main`
   width: 100%;
   display: flex;
   justify-content: center;

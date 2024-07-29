@@ -44,13 +44,18 @@ export class Search extends Component<SearchProps, SearchState> {
               placeholder="Сurrency search..."
               onChange={this.handleChange}
               value={this.props.currency}
+              data-testid="bank_search"
             />
             <SearchIcon />
           </SearchInputContainer>
           {this.state.isHintShow && (
-            <Hint>
+            <Hint data-testid="bank_hint">
               {this.state.currencies.map((currency) => (
-                <HintElem onClick={this.handleLiClick(currency)} key={currency}>
+                <HintElem
+                  data-testid={`bank_${currency}`}
+                  onClick={this.handleLiClick(currency)}
+                  key={currency}
+                >
                   {currency}
                 </HintElem>
               ))}

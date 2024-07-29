@@ -4,14 +4,14 @@ import {
   Form,
   FormInput,
   FormTextArea,
+  ContactWrapper,
 } from './styled'
-import { ChangeEvent, useState } from 'react'
-
 import {
   CONTACT_PLACEHOLDERS,
   CONTACT_US_INFO,
   TEXTAREA_ROW,
 } from './constants'
+import { ChangeEvent, useState } from 'react'
 
 export const Contact = () => {
   const [name, setName] = useState('')
@@ -25,7 +25,7 @@ export const Contact = () => {
   const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) =>
     setMessage(e.target.value)
   return (
-    <>
+    <ContactWrapper data-testid="contact">
       {CONTACT_US_INFO.map((info) => (
         <ContactUsInfo key={info}>{info}</ContactUsInfo>
       ))}
@@ -53,6 +53,6 @@ export const Contact = () => {
         />
         <SubmitButton type="submit">{CONTACT_PLACEHOLDERS.Send}</SubmitButton>
       </Form>
-    </>
+    </ContactWrapper>
   )
 }

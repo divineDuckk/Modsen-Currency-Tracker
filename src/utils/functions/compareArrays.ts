@@ -26,6 +26,5 @@ export const areTimeLineDataEqual = (
       return false
     }
   }
-
   return true
 }

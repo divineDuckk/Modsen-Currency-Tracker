@@ -46,7 +46,7 @@ export class TimeLine extends Component<Record<string, never>, TimeLineState> {
   }
   render() {
     return (
-      <TimeLineContainer>
+      <TimeLineContainer data-testid="timeline">
         <TimeLineButtons
           data={this.state.data}
           setTimeLineData={this.setTimeLineData}

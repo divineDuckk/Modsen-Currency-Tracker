@@ -5,7 +5,7 @@ const BUTTON_WIDTH = 150
 
 const INPUT_WIDTH = 150
 const INPUT_HEIGHT = 45
-export const TimeLineContainer = styled.div`
+export const TimeLineContainer = styled.main`
   width: 100%;
   display: flex;
   flex-direction: column;

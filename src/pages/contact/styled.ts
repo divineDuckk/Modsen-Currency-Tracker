@@ -8,6 +8,13 @@ const SUBMIT_BUTTON_PADDING = '3%'
 const SUBMIT_BUTTON_SCALE = 1.02
 const SUBMIT_BUTTON_TRANSITION = 0.2
 
+export const ContactWrapper = styled.main`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;

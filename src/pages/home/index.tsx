@@ -18,7 +18,7 @@ export const Home = () => {
     }
   }, [])
   return (
-    <Main>
+    <Main data-testid="main">
       <Category>Stocks</Category>
       <CardsGroup>
         {STOCKS.map(({ name, value }) => (
