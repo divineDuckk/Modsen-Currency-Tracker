@@ -23,7 +23,11 @@ export const Card: FC<CardProps> = ({ name, value }) => {
 
   return (
     <>
-      <CardContainer $isStock={isStock} onClick={handlePopUpClick}>
+      <CardContainer
+        $isStock={isStock}
+        onClick={handlePopUpClick}
+        data-testid="open_popup"
+      >
         <CashImage src={image} alt="cash logo" />
         <TextInfo>
           <CashName>{fullname}</CashName>

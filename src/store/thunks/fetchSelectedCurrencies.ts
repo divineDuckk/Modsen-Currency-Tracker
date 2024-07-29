@@ -12,7 +12,6 @@ export const fetchSelectedCurrencies = createAsyncThunk<
   'currencies/fetchSelectedCurrencies',
   async (currency = DEAFAULT_CURRENCY) => {
     try {
-      console.log(currency)
       let filtredCurrencies = currencies.replace(`${currency},`, '')
       if (filtredCurrencies[filtredCurrencies.length - 1] === ',') {
         filtredCurrencies = filtredCurrencies.substring(
@@ -26,7 +25,6 @@ export const fetchSelectedCurrencies = createAsyncThunk<
           base_currency: currency,
         },
       })
-      console.log(res.data)
       const result = Object.values(res.data.data)
       const resData: Record<string, CurrencyData[]> = {}
       resData[currency] = result
