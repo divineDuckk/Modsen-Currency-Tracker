@@ -6,12 +6,14 @@ import {
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { fetchCurrencies } from '@/store/thunks/fetchCurrencies'
 import { fetchSelectedCurrencies } from '@/store/thunks/fetchSelectedCurrencies'
+import { STATUS } from '@/constants'
 
 const initialState: CurrencyInitialState = {
   homeCurrencies: [],
   selectedCurrencies: {},
   status: '',
   lastUpdatedAt: '',
+  selectedCurrencyStatus: '',
 }
 
 const currencySlice = createSlice({
@@ -21,14 +23,17 @@ const currencySlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchCurrencies.pending, (state) => {
-        state.status = ''
+        state.status = STATUS.pending
+      })
+      .addCase(fetchSelectedCurrencies.pending, (state) => {
+        state.selectedCurrencyStatus = STATUS.pending
       })
       .addCase(
         fetchCurrencies.fulfilled,
         (state, action: PayloadAction<ReturnsFetchCurrenciesData>) => {
           state.homeCurrencies = [...action.payload.data]
           state.lastUpdatedAt = action.payload.time
-          state.status = 'done'
+          state.status = STATUS.done
         }
       )
       .addCase(
@@ -38,10 +43,15 @@ const currencySlice = createSlice({
             ...state.selectedCurrencies,
             ...action.payload,
           }
+          state.selectedCurrencyStatus = STATUS.done
         }
       )
+
       .addCase(fetchCurrencies.rejected, (state) => {
-        state.status = 'failed'
+        state.status = STATUS.failed
+      })
+      .addCase(fetchSelectedCurrencies.rejected, (state) => {
+        state.selectedCurrencyStatus = STATUS.failed
       })
   },
 })

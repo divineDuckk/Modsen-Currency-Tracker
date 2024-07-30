@@ -10,6 +10,7 @@ describe('currencySlice', () => {
     selectedCurrencies: {},
     status: '',
     lastUpdatedAt: '',
+    selectedCurrencyStatus: '',
   }
   it('should return the initial state', () => {
     expect(currencyReducer(undefined, { type: '' })).toEqual(initialState)
@@ -21,6 +22,7 @@ describe('currencySlice', () => {
       selectedCurrencies: {},
       status: '',
       lastUpdatedAt: '',
+      selectedCurrencyStatus: '',
     }
     const action = {
       type: fetchCurrencies.fulfilled.type,
@@ -34,6 +36,7 @@ describe('currencySlice', () => {
       selectedCurrencies: {},
       status: 'done',
       lastUpdatedAt: '2024-07-29T00:00:00Z',
+      selectedCurrencyStatus: 'done',
     }
 
     expect(currencyReducer(previousState, action)).toEqual(expectedState)
@@ -45,6 +48,7 @@ describe('currencySlice', () => {
       selectedCurrencies: {},
       status: '',
       lastUpdatedAt: '',
+      selectedCurrencyStatus: '',
     }
     const action = {
       type: fetchSelectedCurrencies.fulfilled.type,
@@ -60,6 +64,7 @@ describe('currencySlice', () => {
         EUR: [{ code: 'EUR', value: 0.9 }],
       },
       status: '',
+      selectedCurrencyStatus: '',
       lastUpdatedAt: '',
     }
     expect(currencyReducer(previousState, action)).toEqual(expectedState)
@@ -71,6 +76,7 @@ describe('currencySlice', () => {
       selectedCurrencies: {},
       status: '',
       lastUpdatedAt: '',
+      selectedCurrencyStatus: '',
     }
     const action = {
       type: fetchCurrencies.pending.type,
@@ -80,6 +86,7 @@ describe('currencySlice', () => {
       selectedCurrencies: {},
       status: '',
       lastUpdatedAt: '',
+      selectedCurrencyStatus: '',
     }
     expect(currencyReducer(previousState, action)).toEqual(expectedState)
   })
@@ -89,6 +96,7 @@ describe('currencySlice', () => {
       homeCurrencies: [],
       selectedCurrencies: {},
       status: '',
+      selectedCurrencyStatus: '',
       lastUpdatedAt: '',
     }
     const action = {
@@ -99,6 +107,7 @@ describe('currencySlice', () => {
       selectedCurrencies: {},
       status: 'failed',
       lastUpdatedAt: '',
+      selectedCurrencyStatus: 'failed',
     }
     expect(currencyReducer(previousState, action)).toEqual(expectedState)
   })
