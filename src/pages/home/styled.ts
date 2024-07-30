@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 const MAX_WIDTH = 520
+const MAX_WIDTH_MOBILE = 720
 
 export const Category = styled.h3`
   width: 100%;
@@ -13,7 +14,16 @@ export const Category = styled.h3`
     border-bottom: 1px solid ${theme.colors['categoryBorder']};
     margin-bottom: ${theme.margins[7]}px;
   `}
+  @media (max-width: ${({ theme }) => theme.breakPoints[0]}px) {
+    max-width: ${MAX_WIDTH_MOBILE}px;
+  }
 `
 export const Main = styled.main`
   margin-bottom: ${({ theme }) => theme.margins[10]}px;
+  flex: 1;
+  @media (max-width: ${({ theme }) => theme.breakPoints[0]}px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `

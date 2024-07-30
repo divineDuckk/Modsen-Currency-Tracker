@@ -8,6 +8,7 @@ const INPUT_HEIGHT = 45
 export const TimeLineContainer = styled.main`
   width: 100%;
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: ${({ theme }) => theme.gaps[1]}px;
   justify-content: center;

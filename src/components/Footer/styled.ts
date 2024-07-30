@@ -9,6 +9,10 @@ const FOOTER_BOT_TEXT_OPACITY = 0.5
 
 export const FooterContainer = styled.footer`
   width: 100%;
+  margin: 0 ${({ theme }) => theme.margins[2]}px;
+  @media (max-width: ${({ theme }) => theme.breakPoints[0]}px) {
+    width: auto;
+  }
 `
 export const FooterMainContainer = styled.div`
   width: 100%;
