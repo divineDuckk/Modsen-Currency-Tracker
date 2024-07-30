@@ -1,3 +1,5 @@
+import { FULLNAME_TO_CURRENCIES_SYMBOLS } from '@/constants'
+
 export type CurrencyCode =
   | 'ARS'
   | 'AUD'
@@ -10,3 +12,5 @@ export type CurrencyCode =
   | 'USD'
   | 'Bovespa Index'
   | 'IFIX'
+
+export type SYMBOLS_TYPE = keyof typeof FULLNAME_TO_CURRENCIES_SYMBOLS

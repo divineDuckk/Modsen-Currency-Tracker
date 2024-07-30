@@ -15,10 +15,16 @@ const colors = {
   cardBg: '#202025',
   popupWrapperBg: 'rgba(0, 0, 0, 0.5)',
   cardBorder: '#474747',
+  candleRed: '#ea3943',
+  candleGreen: '#16c781',
+  notificationBackground: '#03fc1c',
+  black: '#000',
+  contactBg: '#8395f2',
 }
 
-const tops = ['0px', '50%']
+const tops = ['0px', '50%', '90%']
 const lefts = ['0px', '50%']
+const rights = ['1%']
 const zIndexes = [1]
 
 const gaps = [17, 26, 30, 64, 100, 115, 184]
@@ -38,4 +44,5 @@ export const commonTheme = {
   tops,
   lefts,
   zIndexes,
+  rights,
 }
