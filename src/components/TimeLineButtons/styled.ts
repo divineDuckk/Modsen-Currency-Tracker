@@ -72,6 +72,7 @@ export const InformationInput = styled.input`
 export const Selector = styled.select`
   font-family: 'Poppins';
   font-size: ${({ theme }) => theme.fontSizes[0]}px;
+  width: ${INPUT_WIDTH}px;
   height: ${INPUT_HEIGHT}px;
   border: 0;
   color: ${({ theme }) => theme.colors.white};
