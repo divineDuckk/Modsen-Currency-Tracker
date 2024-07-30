@@ -37,4 +37,5 @@ export interface CurrencyInitialState {
   homeCurrencies: CurrencyData[]
   selectedCurrencies: Record<string, CurrencyData[]>
   status: string
+  selectedCurrencyStatus: string
 }

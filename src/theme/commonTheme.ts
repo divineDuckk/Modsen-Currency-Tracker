@@ -20,6 +20,8 @@ const colors = {
   notificationBackground: '#03fc1c',
   black: '#000',
   contactBg: '#8395f2',
+  loader: '#3498db',
+  loaderBg: 'rgba(0, 0, 0, 0.1)',
 }
 
 const tops = ['0px', '50%', '90%']

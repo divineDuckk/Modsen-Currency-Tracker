@@ -121,6 +121,12 @@ export const STOCKS: Stock[] = [
 ]
 export const MAX_DAYS_VALUE = 30
 
+export enum STATUS {
+  pending = '',
+  done = 'done',
+  failed = 'failed',
+}
+
 export const MOCK_BANKS: Bank[] = [
   {
     id: 1,
