@@ -4,6 +4,12 @@ import {
   CurrenciesPopUpCardBlock,
   CurrencyButton,
 } from './styled'
+import {
+  CHECK_FLOAT_START_WITH_ZERO,
+  CURRENCY_TITLE,
+  DEFAULT_AMOUNT,
+  MAX_INPUT_LENGTH,
+} from './constants'
 import { ChangeEvent, FC, useEffect, useState } from 'react'
 
 import { PopUp } from '@/components/PopUp'
@@ -12,7 +18,6 @@ import { selectedCurrencies } from '@/store/selectors/currencies'
 import { fetchSelectedCurrencies } from '@/store/thunks/fetchSelectedCurrencies'
 import { CURRENCIES_FULLNAME, CURRENCY_TO_SHORTNAME_VOCAB } from '@/constants'
 
-import { CURRENCY_TITLE, DEFAULT_AMOUNT, MAX_INPUT_LENGTH } from './constants'
 import { CurrenciesPopUpInfo } from './CurrenciesPopUpInfo'
 import { CardPopUpProps, CurrencyKey } from './types'
 
@@ -28,7 +33,7 @@ export const CardPopUp: FC<CardPopUpProps> = ({ currencyInfo, onClose }) => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.currentTarget.value
-    if (value === '' || /^[1-9]\d*$/.test(value)) {
+    if (value === '' || CHECK_FLOAT_START_WITH_ZERO.test(value)) {
       setAmount(value)
     }
   }

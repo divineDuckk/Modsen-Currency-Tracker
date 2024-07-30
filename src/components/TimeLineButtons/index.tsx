@@ -9,6 +9,7 @@ import {
   SelectorOption,
 } from './styled'
 import {
+  CHECK_FLOAT,
   isNeedToUpdateState,
   MAX_GENERATE_VALUE,
   MIN_GENERATE_VALUE,
@@ -76,26 +77,26 @@ export class TimeLineButtons extends Component<
 
   handleOpenChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.currentTarget
-    if (value === '' || /^\d*\.?\d*$/.test(value)) {
+    if (value === '' || CHECK_FLOAT.test(value)) {
       this.setState({ open: value })
     }
   }
   handleCloseChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
-    if (value === '' || /^\d*\.?\d*$/.test(value)) {
+    if (value === '' || CHECK_FLOAT.test(value)) {
       this.setState({ close: value })
     }
   }
 
   handleLowChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
-    if (value === '' || /^\d*\.?\d*$/.test(value)) {
+    if (value === '' || CHECK_FLOAT.test(value)) {
       this.setState({ low: value })
     }
   }
   handleHighChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
-    if (value === '' || /^\d*\.?\d*$/.test(value)) {
+    if (value === '' || CHECK_FLOAT.test(value)) {
       this.setState({ high: value })
     }
   }
