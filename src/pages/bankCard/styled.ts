@@ -7,4 +7,5 @@ export const BankCardContainer = styled.main`
   flex-direction: column;
   margin-bottom: ${({ theme }) => theme.margins[11]}px;
   align-items: center;
+  flex: 1;
 `

@@ -26,6 +26,9 @@ export const SearchInput = styled.input`
   border: 0;
   color: ${({ theme }) => theme.textColor};
   width: 100%;
+  @media (max-width: ${({ theme }) => theme.breakPoints[0]}px) {
+    font-size: ${({ theme }) => theme.fontSizes[8]}px;
+  }
   &:active,
   &:focus {
     border: 0;
@@ -37,6 +40,9 @@ export const SearchTitle = styled.h2`
   font-weight: ${({ theme }) => theme.fontWeights[1]};
   line-height: ${({ theme }) => theme.lineHeights[9]}px;
   margin-bottom: ${({ theme }) => theme.margins[2]}px;
+  @media (max-width: ${({ theme }) => theme.breakPoints[0]}px) {
+    font-size: ${({ theme }) => theme.fontSizes[12]}px;
+  }
 `
 export const SearchInputContainer = styled.div`
   display: flex;
@@ -80,5 +86,8 @@ export const HintElem = styled.li`
   cursor: pointer;
   &:hover {
     background-color: rebeccapurple;
+  }
+  @media (max-width: ${({ theme }) => theme.breakPoints[0]}px) {
+    font-size: ${({ theme }) => theme.fontSizes[8]}px;
   }
 `

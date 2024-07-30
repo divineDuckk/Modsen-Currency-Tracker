@@ -26,6 +26,9 @@ export const TimeBlock = styled.div`
     line-height: ${theme.lineHeights[5]}px;
     margin-bottom: ${theme.margins[8]}px;
   `}
+  @media (max-width: ${({ theme }) => theme.breakPoints[0]}px) {
+    font-size: ${({ theme }) => theme.fontSizes[11]}px;
+  }
 `
 export const Point = styled.span`
   width: ${POINT_SIZE}px;

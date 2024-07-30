@@ -1,4 +1,4 @@
-const fontSizes = [12, 16, 18, 20, 24, 25, 26, 28, 30, 32, 33, 35, 76, 90]
+const fontSizes = [12, 16, 18, 20, 24, 25, 26, 28, 30, 32, 33, 35, 50, 76, 90]
 const lineHeights = [18, 24, 27, 36, 39, 41, 42, 45, 46, 49, 114, 135]
 const fontWeights = [300, 400, 500, 600]
 
@@ -30,7 +30,7 @@ const zIndexes = [1]
 const gaps = [17, 26, 30, 64, 100, 115, 184]
 const paddings = [25, 29, 30, 45, 58, 96, 121]
 const margins = [16, 20, 29, 30, 32, 39, 45, 50, 57, 87, 96, 121]
-const breakPoints = {}
+const breakPoints = [1100]
 
 export const commonTheme = {
   fontSizes,

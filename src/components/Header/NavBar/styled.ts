@@ -18,4 +18,7 @@ export const NavElement = styled.li`
     opacity: 1;
     filter: drop-shadow(0 0 0.5rem ${({ theme }) => theme.shadow});
   }
+  @media (max-width: ${({ theme }) => theme.breakPoints[0]}px) {
+    font-size: ${({ theme }) => theme.fontSizes[5]}px;
+  }
 `
