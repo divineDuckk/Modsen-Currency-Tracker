@@ -4,7 +4,7 @@ import { Component, createRef, RefObject } from 'react'
 import { findBanks } from '@/utils/functions'
 import { Bank } from '@/interfaces'
 
-import { MOCK_BANKS, MY_LAT, MY_LNG, ZOOM } from './constants'
+import { MY_LAT, MY_LNG, ZOOM } from './constants'
 import { Map } from './styled'
 import { MapProps } from './types'
 
@@ -62,7 +62,7 @@ export class MapBox extends Component<MapProps> {
 
   updateBanks = () => {
     this.clearBanks()
-    this.addBanks(findBanks(this.props.currency, MOCK_BANKS))
+    this.addBanks(findBanks(this.props.currency))
   }
 
   clearBanks = () => {

@@ -21,7 +21,7 @@ export class BankCard extends Component<Record<string, never>, BankCardState> {
     const currencyShortName =
       CURRENCY_TO_SHORTNAME_VOCAB[this.state.currency as SYMBOLS_TYPE]
     return (
-      <BankCardContainer>
+      <BankCardContainer data-testid="bank">
         <Search setCurrency={this.setCurrency} currency={this.state.currency} />
         <MapBox currency={currencyShortName} />
       </BankCardContainer>

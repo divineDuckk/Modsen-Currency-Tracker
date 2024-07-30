@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const POPUP_WRAPPER_SIZES = '100%'
 const POPUP_WIDTH = '50%'
-const POPUP_HEIGHT = '60%'
+const POPUP_HEIGHT = '60wv'
 const POPUP_RADIUS = 10
 const CLOSE_BTN_SIZE = 50
 const CLOSE_BTN_THICKNESS = 2

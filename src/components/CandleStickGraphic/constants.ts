@@ -6,4 +6,3 @@ export const GRAPHIC_PADDING = {
 }
 export const Y_TICKS_PADDING = 10
 export const TOOL_TIP_TOFIXED_VALUE = 2
-export const MAX_DAYS_VALUE = 30

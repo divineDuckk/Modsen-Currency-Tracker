@@ -80,6 +80,7 @@ export const CardPopUp: FC<CardPopUpProps> = ({ currencyInfo, onClose }) => {
               onClick={handleClickCurrency(fullnume)}
               $isChoosen={selectedCurrecncy === fullnume}
               key={fullnume}
+              data-testid={`switch_${fullnume}`}
             >
               {fullnume}
             </CurrencyButton>

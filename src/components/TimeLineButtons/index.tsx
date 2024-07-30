@@ -113,47 +113,69 @@ export class TimeLineButtons extends Component<
             type="date"
             value={date}
             onChange={this.handleDateChange}
+            data-testid="timeline_date"
           />
           <InformationInput
             min={MIN_VALUE}
             value={open}
             onChange={this.handleOpenChange}
             placeholder={PLACEHOLDERS.open}
+            data-testid="timeline_open"
           />
           <InformationInput
             min={MIN_VALUE}
             value={close}
             onChange={this.handleCloseChange}
             placeholder={PLACEHOLDERS.close}
+            data-testid="timeline_close"
           />
           <InformationInput
             min={MIN_VALUE}
             value={low}
             onChange={this.handleLowChange}
             placeholder={PLACEHOLDERS.low}
+            data-testid="timeline_low"
           />
           <InformationInput
             min={MIN_VALUE}
             value={high}
             onChange={this.handleHighChange}
             placeholder={PLACEHOLDERS.high}
+            data-testid="timeline_high"
           />
           <Selector
             disabled={this.props.data.length !== 0}
             value={this.props.selectedType}
             onChange={this.handleTypeChange}
+            data-testid="timeline_selector"
           >
             {CURRENCIES_FULLNAME.map((currency) => (
-              <SelectorOption key={currency} value={currency}>
+              <SelectorOption
+                key={currency}
+                value={currency}
+                data-testid={`timeline_options_${currency}`}
+              >
                 {currency}
               </SelectorOption>
             ))}
           </Selector>
         </ManageBlockWrapper>
         <ManageButtonsWrapper>
-          <AddDataButton onClick={this.addData}>Add</AddDataButton>
-          <ClearDataButton onClick={this.clearData}>Clear</ClearDataButton>
-          <RandomButton onClick={this.getRandomData}>Random</RandomButton>
+          <AddDataButton data-testid="timeline_add" onClick={this.addData}>
+            Add
+          </AddDataButton>
+          <ClearDataButton
+            data-testid="timeline_clear"
+            onClick={this.clearData}
+          >
+            Clear
+          </ClearDataButton>
+          <RandomButton
+            data-testid="timeline_random"
+            onClick={this.getRandomData}
+          >
+            Random
+          </RandomButton>
         </ManageButtonsWrapper>
       </>
     )

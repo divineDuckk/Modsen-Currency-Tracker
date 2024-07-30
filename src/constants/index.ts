@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/no-duplicate-enum-values */
+import {
+  Bank,
+  CurrencyInfo,
+  CustomDataPoint,
+  MockData,
+  Stock,
+} from '@/interfaces'
 import { CurrencyCode } from '@/types'
-import { CurrencyInfo, CustomDataPoint, MockData, Stock } from '@/interfaces'
-import { Home } from '@/pages/home'
-import { TimeLine } from '@/pages/timeLine'
-import { Contact } from '@/pages/contact'
-import { BankCard } from '@/pages/bankCard'
 import ARS_LOGO from '@/assets/peso.svg'
 import AUD_LOGO from '@/assets/australianDollar.svg'
 import BOV_LOGO from '@/assets/bovespa.svg'
@@ -119,11 +121,43 @@ export const STOCKS: Stock[] = [
 ]
 export const MAX_DAYS_VALUE = 30
 
-export const RoutesArr = [
-  { path: '/', Page: Home },
-  { path: '/timeline', Page: TimeLine },
-  { path: '/bank_card', Page: BankCard },
-  { path: '/contato', Page: Contact },
+export const MOCK_BANKS: Bank[] = [
+  {
+    id: 1,
+    name: 'Prior bank',
+    currencies: ['CAD', 'USD', 'EUR', 'CNY'],
+    coordinate: { lat: 30.2080241, lng: 55.1576229 },
+  },
+  {
+    id: 2,
+    name: 'Belarus bank',
+    currencies: ['BTC', 'USD', 'EUR', 'LRD'],
+    coordinate: { lat: 30.20841, lng: 55.151 },
+  },
+  {
+    id: 3,
+    name: 'Prior bank',
+    currencies: ['AUD', 'USD', 'EUR'],
+    coordinate: { lat: 30.21041, lng: 55.156 },
+  },
+  {
+    id: 4,
+    name: 'Alpha bank',
+    currencies: ['BTC', 'CAD', 'USD', 'JPY', 'EUR', 'CNY', 'LRD', 'ARS'],
+    coordinate: { lat: 30.2123, lng: 55.139 },
+  },
+  {
+    id: 5,
+    name: 'Belinvest bank',
+    currencies: ['AUD', 'USD'],
+    coordinate: { lat: 30.213867, lng: 55.1521665 },
+  },
+  {
+    id: 6,
+    name: 'Belinvest bank',
+    currencies: ['CAD', 'USD', 'JPY', 'EUR', 'CNY'],
+    coordinate: { lat: 30.20977, lng: 55.1555 },
+  },
 ]
 
 export const HISTORY_MOCK_DATA: CustomDataPoint[] = [
