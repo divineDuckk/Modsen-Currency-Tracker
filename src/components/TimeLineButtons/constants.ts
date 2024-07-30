@@ -19,3 +19,5 @@ export const isNeedToUpdateState = (
   if (data.length === MAX_DAYS_VALUE) return false
   return true
 }
+
+export const CHECK_FLOAT = /^\d*\.?\d*$/

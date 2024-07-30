@@ -8,6 +8,7 @@ const lightThemeColors = {
   popUpBg: '#f5eeff',
   shadow: '#000',
   gridGraphic: 'rgba(0,0,0,0.9)',
+  searchInputBg: '#37f0a3',
 }
 
 export const lightTheme = {

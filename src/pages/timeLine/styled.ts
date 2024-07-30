@@ -12,6 +12,7 @@ export const TimeLineContainer = styled.div`
   gap: ${({ theme }) => theme.gaps[1]}px;
   justify-content: center;
   align-items: center;
+  margin-bottom: ${({ theme }) => theme.margins[11]}px;
 `
 export const AddDataButton = styled.button`
   width: ${BUTTON_WIDTH}px;
