@@ -26,9 +26,19 @@ export class MapBox extends Component<MapProps> {
       this.map = new mapboxgl.Map({
         container: this.mapContainer.current,
         style: 'mapbox://styles/mapbox/streets-v12',
-        center: [MY_LAT, MY_LNG],
+        center: [MY_LNG, MY_LAT],
         zoom: ZOOM,
         accessToken: process.env.MAPBOXGL_API_KEY,
+      })
+    }
+
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const myLat = position.coords.latitude
+        const myLng = position.coords.longitude
+        if (this.map) {
+          this.map.setCenter([myLng, myLat])
+        }
       })
     }
   }
@@ -40,7 +50,9 @@ export class MapBox extends Component<MapProps> {
   }
 
   componentWillUnmount() {
-    this.map!.remove()
+    if (this.map) {
+      this.map.remove()
+    }
   }
 
   addBanks = (banks: Bank[]) => {
