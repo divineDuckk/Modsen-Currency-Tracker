@@ -1,7 +1,9 @@
 import {
+  FONT_SIZE,
   GRAPHIC_PADDING,
   TOOL_TIP_TOFIXED_VALUE,
   Y_TICKS_PADDING,
+  Y_TITILE_PADDING,
 } from './constants'
 import { ChartConfiguration, ScriptableContext, TooltipItem } from 'chart.js'
 import { DefaultTheme } from 'styled-components'
@@ -64,6 +66,10 @@ export const config = (
           text: 'DAY',
           color: theme.textColor,
           align: 'end',
+          font: {
+            size: FONT_SIZE,
+          },
+          padding: Y_TITILE_PADDING,
         },
         offset: true,
       },
@@ -76,6 +82,9 @@ export const config = (
         ticks: {
           color: theme.textColor,
           padding: Y_TICKS_PADDING,
+          font: {
+            size: FONT_SIZE,
+          },
         },
         offset: true,
       },

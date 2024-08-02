@@ -1,6 +1,7 @@
 import { Chart, Plugin, TooltipModel } from 'chart.js'
 
 import { CustomDataPoint } from '@/interfaces'
+import { FONT_SIZE } from '@/components/CandleStickGraphic/constants'
 
 export const cross = (currency: string): Plugin<'bar'> => ({
   id: 'cross',
@@ -47,11 +48,11 @@ export const cross = (currency: string): Plugin<'bar'> => ({
       ctx.beginPath()
       ctx.fillStyle = '#FF971E'
 
-      const xA = right
+      const xA = right + 5
       const yValue = raw.c
-      const yA = y.getPixelForValue(yValue) - 13
-      const width = left + 50
-      const height = 24
+      const yA = y.getPixelForValue(yValue) - 23
+      const width = left + 60
+      const height = 40
       const cornerRadius = 5
 
       ctx.beginPath()
@@ -75,12 +76,12 @@ export const cross = (currency: string): Plugin<'bar'> => ({
       ctx.fill()
 
       ctx.fillStyle = 'black'
-      ctx.font = 'bold 14px Arial'
+      ctx.font = `bold ${FONT_SIZE}px Arial`
       ctx.textAlign = 'center'
       ctx.textBaseline = 'middle'
       ctx.fillText(
         `${currency} ` + raw.c.toFixed(2),
-        right + 40,
+        right + 65,
         y.getPixelForValue(raw.c)
       )
 

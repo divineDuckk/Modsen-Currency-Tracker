@@ -2,10 +2,10 @@ import { MAX_DAYS_VALUE } from '@/constants'
 import { TimeLineDataStucture } from '@/interfaces'
 
 export const PLACEHOLDERS = {
-  high: 'Highest',
-  low: 'Lowest',
-  open: 'Open',
-  close: 'Close',
+  high: 'Enter highest price',
+  low: 'Enter lowest price',
+  open: 'Enter open price',
+  close: 'Enter close price',
 }
 export const MIN_VALUE = 0
 export const MIN_GENERATE_VALUE = 5000

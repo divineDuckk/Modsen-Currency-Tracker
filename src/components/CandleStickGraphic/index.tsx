@@ -70,7 +70,7 @@ class CandleStickGraphic extends Component<CandleStickGraphicProps> {
   render() {
     return (
       <ChartBox>
-        <GraphicCanvas ref={this.chartRef} />
+        {this.props.data.length ? <GraphicCanvas ref={this.chartRef} /> : <></>}
       </ChartBox>
     )
   }

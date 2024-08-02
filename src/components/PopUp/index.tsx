@@ -23,10 +23,7 @@ export const PopUp: FC<PopUpProps> = ({ children, onClose, title }) => {
       <PopUpContainer onClick={handleContainerClick} data-testid="popup">
         <TopPanel>
           <Title>{title}</Title>
-          <CloseButton
-            onClick={onClose}
-            data-testid="popup_close_button"
-          ></CloseButton>
+          <CloseButton onClick={onClose} data-testid="popup_close_button" />
         </TopPanel>
         <MainContainer>{children}</MainContainer>
       </PopUpContainer>

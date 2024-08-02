@@ -27,6 +27,7 @@ export const CurrenciesChangeBlock = styled.div`
   flex-direction: column;
   gap: ${({ theme }) => theme.gaps[0]}px;
 `
+
 export const CurrencyButton = styled.button<CurrencyButtonAttrs>`
   position: relative;
   cursor: pointer;
