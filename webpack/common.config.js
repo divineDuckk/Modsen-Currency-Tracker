@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 const FileManagerPlugin = require('filemanager-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   entry: path.join(__dirname, '..', './src/index.tsx'),
@@ -13,14 +14,7 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      '@src': path.resolve(__dirname, '../src'),
-      '@components': path.resolve(__dirname, '../src/components'),
-      '@constants': path.resolve(__dirname, '../src/constants'),
-      '@hooks': path.resolve(__dirname, '../src/hooks'),
-      '@utils': path.resolve(__dirname, '../src/utils'),
-      '@assets': path.resolve(__dirname, '../src/assets'),
-      '@store': path.resolve(__dirname, '../src/store'),
-      '@types': path.resolve(__dirname, '../src/types'),
+      '@': path.resolve(__dirname, '../src'),
     },
   },
   module: {
@@ -71,6 +65,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
+    new Dotenv(),
   ],
   devServer: {
     historyApiFallback: true,
